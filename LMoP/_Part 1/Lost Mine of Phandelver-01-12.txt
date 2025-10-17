@@ -1,0 +1,607 @@
+                                               INTRODUCTION                                                                                                                                                       2                            OldOwlWell                                                                                                                                               29
+                                                      Running the Adventure                                                                                                                                       2                            Ruins ofThundertree                                                                                                                                      30
+                                                      Background                                                                                                                                                  3                            Wyvern Tor                                                                                                                                               35
+                                                      Overview                                                                                                                                                    3                            Cragmaw Castle                                                                                                                                           35
+                                                      Adventure Hook                                                                                                                                              4                     PART 4: WAVE ECHO CAVE                                                                                                                                          42
+                                                      The Forgotten Realms                                                                                                                                        4                            Character Level                                                                                                                                          42
+                                               PART 1: GOBLIN ARROWS                                                                                                                                              6                            Experience Point Awards                                                                                                                                  42
+                                                      Goblin Ambush                                           T~                 ••••••••••••••••••••••••••••••••••••••••••••••••••••                             6                            Wandering Monsters                                                                                                                                       42
+                                                      Cragmaw Hideout                                                                                                                                             7                            General Features                                                                                                                                         42
+                                               PART 2: PHANDALIN                                                                                                                                               14                              KeyedEncounters                                                                                                                                          42
+                                                      Encounters in Phandalin                                                                                                                                  14                               Conclusion                                                                                                                                              51
+                                                      Important NPCs                                                                                                                                           15                       ApPENDIX                             A: MAGIC ITEMS                                                                                                             52
+                                                      TownDescription                                                                                                                                          15                              Using a MagicItem                                                                                                                                        52
+                                                      Redbrand Ruffians                                                                                                                                        19                              Item Descriptions                                                                                                                                        52
+                                                      Redbrand Hideout.                                                                                                                                        20                       ApPENDIX                             B: MONSTERS                                                                                                                54
+                                               PART 3: THE SPIDER'S WEB                                                                                                                                        27                               Statistics                                                                                                                                              54
+                                                      Triboar Trail                                                                                                                                            27                               Monster Descriptions                                                                                                                                    56
+                                                      Conyberry and Agatha's Lair                                                                                                                              28                        RULES INDEX                                                                                                                                                    64
+                              INTRODUCTION
+                             This book is written for the Dungeon Master. It contains                                                                      group together and start up a game often ends up being
+                             a complete DUNGEONS&DRAGONSadventure, as well                                                                                 the DM by default, but that doesn't have to be the case.
+                             as descriptions                for every creature                  and magic item that                                            Although the DM controls the monsters                                         and villains             -
+                             appears          in the adventure.                 It also introduces                 the world of                            the adventure,               the relationship                between the players and
+                             the Forgotten               Realms, one of the game's most enduring                                                           the DM isn't adversarial.                        The DM's job is to challenge                            the
+                             settings,         and it teaches you how to run a D&D game.                                                                   characters            with interesting                encounters            and tests, keep me
+                                 The smaller book that accompanies                                      this one (hereafter                                game moving, and apply the rules fairly.
+                             called "the rulebook")                      contains          the rules you need to                                               The most important                      thing to remember                    about being
+                             adjudicate           situations           that arise during the adventure.                                                    a good DM is that the rules are a tool to help you have a
+                                                                                                                                                           good time. The rules aren't in charge. You're the DM-
+                              RUNNING THE ADVENTURE                                                                                                        you're in charge of the game. Guide the play experience
+                             Lost Mine ofPhandelver is an adventure for four to five                                                                       and the use of the rules so that everybody has fun.
+                             characters            of 1st level. During the course of the adventure,                                                           Many players of DUNGEONS&DRAGONSfind that being
+                             the characters               will advance to 5th level. The adventure                                                         the DM is the best part of the game. With the information
+                             is set a short distance                     from the city of Neverwinter                           in the                     in this adventure,                 you'll be prepared                  to take on that role
+                             Sword Coast region of the Forgotten Realms setting. The                                                                       for your group.
+                             Sword Coast is part of the North-a                                     vast realm of free
+                             settlements             surrounded              by wilderness               and adventure.                                       RULES TO GAME By
+                             You don't need to be a Forgotten                                Realms expert to run the                                        As the Dungeon               Master,       you are the final authority                 when it
+                             adventure;            everything            you need to know about the setting                                                  comes        to rules questions             or disputes          during      the game.         Here are
+                             is contained             in this book.                                                                                           some guidelines             to help you arbitrate               issues      as they come up.
+                                 If this is your first time running                            a D&D adventure, read                                             When in doubt,             make it up! It's better to keep the
+                             "The Dungeon Master" section; it will help you better                                                                            game moving than to get bogged                           down in the rules.
+                             understand             your role and responsibilities.                                                                              It's  not a competition.              The DM isn't competing                     against       the
+                                 The "Background"                      section tells you everything                         you need                          player characters.            You're there to run the monsters,                         referee     the
+                             to know to set up the adventure.                               The "Overview" section                                            rules,    and keep the story moving.
+                             describes           how the adventure                    is expected            to run and gives                                    It's  a shared        story.    It's the group's          story, so let the players
+                                                                                                                                                             contribute         to the outcome             through        the actions         of their
+                             you a broad sense of what the player characters                                              should be                          characters.         DUNGEONS& DRAGONSis about imagination                                    and
+                             doing at any given time.                                                                                                        coming        together        to tell a story as a group.                Let the players
+                                                                                                                                                              participate        in the storytelling.
+                             THE DUNGEON MASTER                                                                                                                  Be consistent.           If you decide          that    a rule works a certain               way in
+                             The Dungeon Master (DM) has a special role in the                                                                               one session,           make sure it works that way the next time it comes
+                             DUNGEONS&DRAGONSgame.                                                                                                            into play.
+                                                                                                                                                                 Make sure everyone                 is involved.         Ensure every character                 has
+                                 The DM is a referee.                      When it's not clear what ought to                                                 a chance        to shine.       If some       players      are reluctant          to speak       up,
+                             happen next, the DM decides how to apply the rules and                                                                           remember          to ask them what their characters                         are doing.
+                             keep the story going.                                                                                                               Be fair. Use your powers                  as Dungeon            Master       only for good.
+                                 The DM is a narrator.                       The DM sets the pace of the story                                               Treat the rules and the players in a fair and impartial                                   manner.
+                             and presents              the various challenges                       and encounters                 the                           Pay attention.           Make sure you look around                      the table
+                             players must overcome. The DM is the players' interface                                                                         occasionally          to see if the game              is going well. If everyone                 seems
+                             to the D&D world, as well as the one who reads (and                                                                             to be having fun, relax and keep going.                            If the fun is waning,              it
+                             sometimes              also writes) the adventure                         and describes               what                       might be time for a break, or you can try to liven things                                     up.
+                             happens in response                       to the clJaracters'               actions.
+                                 The DM plays monsters.                            The DM plays the monsters                                               IMPROVISING                             ABILITY                    CHECKS
+                             and villains the adventurers                           battle against,              choosing their
+                             actions and rolling dice for their attacks. The DM also                                                                       The adventure                often tells you what ability checks
+                             plays the part of all the other characters                                     the players meet                               characters            might try in a certain                    situation         and the
+                             in the course of their adventures,                               like the prisoner                in the                      Difficulty Class (DC) of those checks. Sometimes
+                             goblin lair or the innkeeper                          in town.                                                                adventurers             try things that the adventure                            can't possibly
+                                 Who should be the DM for your gaming group? Whoever                                                                       anticipate.          It's up to you to decide whether                             their attempts
+                             wants to be! The person who has the most drive to pull a                                                                      are successful.               If it seems like anyone should have an
+                                                                                                                                                           easy time doing it, don't ask for an ability check; just
+                  2
+                                      INTRODUCTION
+                tell the player what happens.      Likewise, if there's no way                 Similarly, whenever the adventure        text presents   a
+                anyone could accomplish the task, just tell the player it                    creature's  name in bold type, that's a visual cue directing
+                doesn't work.                                                                you to the creature's   game statistics   in appendix B.
+                   Otherwise,    answer these three simple questions:
+                   What kind of ability check?                                              ABBREVIATIONS
+                   How hard is it?                                                           The following abbreviations      are used in this adventure.
+                   What's the result?                                                        DC=Difficulty Class            XP=ei<perr6,ce   points
+                Use the descriptions     of the ability scores and their                     gp = gold piece(s)             pp = platinum   piece(s)
+                associated    skills in the rulebook to help you decide what                 sp = silver piece(s)           ep = electrum  piece(s)
+                kind of ability check to use. Then determine how hard                        cp = copper  piece(s)
+                the task is so that you can set the DC for the check. The
+                higher the DC, the more difficult the task. The easiest way                  BACKGROUND
+                to set a DC is to decide whether the task's difficulty is easy,
+                moderate, or hard, and use these three DCs:                                  More than five hundred years ago, clans of dwarves and
+                   Easy (DC 10). An easy task requires a minimal level of                    gnomes made an agreement known as the Phandelver's
+                   competence     or a modicum of luck to accomplish.                        Pact, by which they would share a rich mine in a wondrous
+                   Moderate    (DC 15). Amoderate task requires a slightly                   cavern known as Wave Echo Cave. In addition to its
+                   higher level of competence      to accomplish.   Acharacter               mineral wealth, the mine contained        great magical power.
+                   with a combination     of natural  aptitude and specialized               Human spellcasters      allied themselves    with the dwarves
+                   training  can accomplish a moderate task more often                       and gnomes to channel and bind that energy into a great
+                   than not.                                                                 forge (called the Forge of Spells), where magic items could
+                • Hard (DC 20). Hard tasks include any effort that is                        be crafted. Times were good, and the nearby human town
+                   beyond the capabilities    of most people without aid or                  of Phandalin   (pronounced     fan-duh-lin) prospered     as well.
+                   exceptional   ability. Even with aptitude and training, a                 But then disaster struck when ores swept through the
+                   character   needs some amount of luck-or         a lot of spe-            North and laid waste to all in their path.
+                   cialized training-to    pull off a hard task.                               Apowerful force of ores reinforced        by evil mercenary
+                                                                                            wizards attacked Wave Echo Cave to seize its riches and
+                   The outcome of a successful       check is usually easy to                magic treasures.    Human wizards fought alongside their
+                determine:    the character   succeeds   at whatever he or she               dwarf and gnome allies to defend the Forge of Spells, and
+                set out to accomplish,    within reason. It's usually equally                the ensuing spell battle destroyed much of the cavern.
+                easy to figure out what happens when a character           fails a          Few survived the cave-ins and tremors, and the location of
+                check: the character     simply doesn't succeed.                            Wave Echo Cave was lost.
+                                                                                               For centuries,   rumors of buried riches have attracted
+                 GLOSSARY                                                                   treasure   seekers   and opportunists     to the area around
+                The adventure     uses terms that might be unfamiliar        to you.        Phandalin,    but no one has ever succeeded        in locating the
+                Afew of these terms are described         here. For descriptions            lost mine. In recent years, people have resettled        the area.
+                of rules-specific   terms, see the rulebook.                                Phandalin    is now a rough-and-tumble       frontier town. More
+                   Characters. This term refers to the adventurers          run             important,    the Rockseeker    brothers-a     trio of dwarves-
+                by the players. They are the protagonists        in any D&D                 have discovered     the entrance   to Wave Echo Cave, and they
+                adventure.   Agroup of characters      or adventurers    is                 intend to reopen the mines.
+                called aparty.                                                                 Unfortunately    for the Rockseekers,     they are not the only
+                  Nonplayer Characters (NPCs).This term refers to                           ones interested    in Wave Echo Cave. A mysterious villain
+                characters   run by the DM. How an NPC behaves is                           known as the Black Spider controls a network of bandit
+                dictated by the adventure      and by the DM.                               gangs and goblin tribes in the area, and his agents have
+                  Boxed Text. At various places, the adventure presents                     followed the Rockseekers       to their prize. Now the Black
+                descriptive   text that's meant to be read or paraphrased                   Spider wants Wave Echo Cave for himself, and he is
+                aloud to players. This read-aloud text is offset in boxes.                  taking steps to make sure no one else knows where it is.
+                Boxed text is most commonly used to describe rooms or                        OVERVIEW
+                present   bits of scripted  dialogue.
+                   Stat Block. Any monster or NPC that is likely to be                      Lost Mine of Phande1ver is divided into four parts. In part
+                involved in combat requires      game statistics    so that the DM           1, "Goblin Arrows," the adventurers       are on the road to
+                can run it effectively. These statistics    are presented    in a           the town of Phandalin      when they stumble into a goblin
+                format called a statistics block, or stat block. You'll find the            ambush. They discover that the goblins (who belong to the
+                stat blocks needed for this adventure       in appendix B.                  Cragmaw tribe) have captured their dwarf friend Gundren
+                   Tenday. In the Forgotten Realms, a week is ten days                      Rockseeker     and his escort, a human warrior named Sildar
+                long and called a tenday. Each month consists of three                      Hallwinter.   The characters     must deal with the ambushers
+                ten days-thirty    days total.                                              and then follow their trail back to the goblins' hideout.
+                MAGIC ITEMS AND MONSTERS                                                    They rescue Sildar and learn from him that Gundren
+                                                                                            and his brothers    discovered    a famous lost mine. Sildar
+                Whenever the text refers to a magic item, its name is                       knows only that Gundren and his map have been taken to
+                presented    in italic type. For a description   of the item and            somewhere      called "Cragmaw Castle."
+                .its magical properties,   see appendix A.                                     In part 2, "Phandalin,"    the characters    arrive in
+                                                                                            Phandalin    to find it terrorized  by the Redbrands,     a gang
+                                                                                                                                                                      3
+                                                                                                                                          INTRODUCTION
+                         of miscreants         led by a mysterious            figure called Glasstaff.                        wreckage of a technological                 civilization.      Most D&D
+                        Anumber ofinteresting                  NPCs can also be found in                                      settings     are somewhere            between those two extremes:
+                         Phandalin,        laying the hooks for short adventures                      in part                 worlds of medieval high fantasy with knights and
+                         3. The Redbrands             try to run the characters             out of town, so                   castles,     as well as elven cities, dwarven mines, and
+                         the characters         return     the favor and storm the Redbrand                                   fearsome monsters.
+                         lair. In a hidden stronghold               beneath an old manor, they                                   The world of the Forgotten Realms is one such setting,
+                         find that larno "Glasstaff" Albrek, the leader of the                                                and that's where the story in this adventure                        takes place.
+                        Redbrands,         is taking his orders from someone called                                           In the Realms, knights dare the crypts of the fallen dwarf
+                         the Black Spider-and               that the Black Spider wants the                                   kings of Delzoun, seeking glory and treasure.                           Rogues
+                         adventurers        out of the picture.                                                               prowl the dark alleyways of teeming cities such as
+                            Part 3, "The Spider's Web," provides the characters                                               Neverwinter         and Baldur's Gate. Clerics in the service of
+                        with several short adventures                   in the region around                                  gods wield mace and spell, questing against the terrifying
+                         Phandalin        as they search for more information                      about the                  powers that threaten             the land. Wizards plunder the ruins
+                        Black Spider and the dwarves' lost mine. The clues the                                                of the fallen Netherese             empire, delving into secrets too
+                         characters       picked up in Phandalin               can lead them to spy on                        dark for the light of day. Dragons, giants, demons, and
+                         a mysterious        wizard at the ruins of Old Owl Well, seek the                                    unimaginable          abominations          lurk in dungeons,            caverns,
+                         advice of a dangerous             banshee,       oust a band of ores lurking                         ruined cities, and the vast wild places of the world.
+                         at Wyvern Tor, and investigate the ruins of the town                                                    On the roads and rivers of the Realms travel minstrels
+                         of Thundertree.                                                                                      and peddlers,         merchants        and guards, soldiers, sailors,
+                            Several of these leads point to Cragmaw Castle, which                                             and steel-hearted           adventurers        carrying       tales of strange,
+                        is the stronghold           of King Grol, leader of the Cragmaw                                       glorious, faraway places. Good maps and clear trails can
+                        goblins. Here the characters                  discover that the Black                                 take even an inexperienced                 youth with dreams of glory far
+                         Spider is a drow adventurer                 named Nezznar, and that the                              across the world. Thousands                   of restless      would-be heroes
+                        Cragmaw goblins work for him (drow are elves who hail                                                 from backcountry            farmsteads         and sleepy villages arrive in
+                        from a realm deep underground).                      More importantly,            they                Neverwinter         and the other great cities every year in search
+                        recover Gundren Rockseeker's                      map to the lost mine, or                            of wealth and renown.
+                        learn the mine's location from one of the other leads they                                               Known roads may be well traveled, but they aren't
+                        unearth       during part 3.                                                                          necessarily       safe. Fell magic, deadly monsters,                    and cruel
+                            Following the map or the directions                     to the lost mine                          local rulers are all perils that you face when you travel in
+                        brings the characters              to part 4, "Wave Echo Cave." That                                  the Forgotten         Realms. Even farms and freeholds within a
+                        lost underground            complex is now overrun by undead and                                      day's walk of a city can fall prey to monsters,                       and no place
+                        strange      monsters.        Nezznar the Black Spider is there with                                  is safe from the sudden wrath of a dragon.
+                        his loyal followers, exploring the mines and searching                                for                The regional map shows just a tiny part of this vast
+                        the legendary          Forge of Spells. The adventurers                    have the                   world, in a region called the Sword Coast. This is a region
+                        opportunity         to avenge Gundren Rockseeker,                     to ensure                       of adventure,        where daring souls delve into the wreckage
+                        the prosperity         and security of Phandalin                 by clearing                          of ancient strongholds             and explore ruins of long-lost
+                        the rich mine of its monsters,                 and to put an end to the                               cultures.     Amid a wilderness              ofjagged, snow-capped
+                        troublemaking           of the Black Spider-if              they can survive the                      peaks, alpine forests, lawlessness,                   and monsters,           the coast
+                        dangers of the Lost Mine of Phandelver.                                                               holds the greatest          bastions      of civilization,       including the
+                                                                                                                              coastal city of Neverwinter.
+                        ADVENTURE HOOK
+                        You can let players invent their own reasons for visiting                                               ROLEPLAYING            AND INSPIRATION
+                        Phandalin,         or you can use the following adventure hook.                                         One of the things       that   you can do as the OM is reward players
+                        The backgrounds              and secondary           goals on the character                             for roleplaying     their  characters     well.
+                        sheets also provide characters                   with motivations           for                            Each of the characters         included    in this set has two personality
+                        visiting Phandalin.                                                                                     traits  (one positive     and one negative).         an ideal, a bond,      and a
+                           MeetMeinPhandalin. The characters                              are in the city of                    flaw. These    elements      can make the character           easier   and more
+                        Neverwinter          when their dwarf patron and friend, Gundren                                        fun to roleplay.     Personality     traits  provide    a glimpse     into the
+                        Rockseeker,         hires them to escort a wagon to Phandalin.                                          character's    likes, dislikes,    accomplishments,          fears,   attitude,   or
+                        Gundren has gone ahead with a warrior, Sildar Hallwinter,                                               mannerisms.       An ideal is something          that  the character      believes
+                        to attend to business            in the town while the characters                                       in or strives    for above all else. A character's          bond represents
+                                                                                                                                a connection      to a person,     place,   or event    in the world-
+                        follow with the supplies. The characters                        will be paid 10 gp                      someone      the character      cares   about,    a place the holds a special
+                        each by the owner of Barthen's                   Provisions        in Phandalin                         connection,      or a treasured      possession.     Aflaw is a characteristic
+                        when they deliver the wagon safely to that trading post.                                                that  someone      else can exploit to bring the character             to ruin or
+                                                                                                                                cause   the character      to act against      his or her best interests.
+                        THE FORGOTTEN REALMS                                                                                      When a player roleplays           a negative     personality    trait  or gives in
+                                                                                                                                to a drawback       presented     by a bond or a flaw, you can give that
+                        Just like a fantasy novel or movie, an adventure                          is set in a                   player's   character    one inspiration       as a reward.     The player can
+                        larger world. In fact, the world can be anything that the                                               then   spend    it when    his or her character       makes an ability check,
+                        DMand players can imagine. It could be a swords-and-                                                    an attack    roll, or a saving     throw.   Spending      inspiration     gives the
+                        sorcery setting at the dawn of civilization, where                                                      character    advantage      on the roll. A clever player might           spend    the
+                        barbarians        battle evil sorcerers,           or a post-apocalyptic                                inspiration    to counteract      disadvantage       on a roll.
+                        fantasy where elves and dwarves wield magic amid the                                                      Acharacter       can have only one inspiration            at a time.
+               4
+                               INTRODUCTION
+                                                                                                                     5
+                                                                                                  INTRODUCTION
+                      PART 1: GOBLIN ARROWS
+                     The adventure begins as the player characters are                                    escorting Gundren's wagonload ofsupplies, then one or
+                     escorting a wagon full ofprovisions and supplies from                                two characters need to be driving the wagon. The rest
+                     Neverwinter to Phandalin. The journey takes them south                               ofthe characters can be riding on the wagon, walking
+                     along the High Road to the Triboar Trail, which heads east                           alongside, or scouting ahead, as they like.
+                     (as shown on the overland map).When they're a half-day's
+                     march from Phandalin, they run into trouble with goblin                            DRIVING THE WAGON
+                     raiders from the Cragmaw tribe.                                                    Anycharacter can drive a wagon, and no particular skill is
+                        Read the boxed text when you're ready to start. Ifyou                           necessary. Twooxen pull the wagon. Ifno one is holding
+                     create a different adventure hook, skip to the second                              the reins, the oxen stop where they are.
+                     paragraph and adjust the details as necessary, ignoring                              The wagon is packed full ofan assortment ofmining
+                     the information about driving the wagon.                                           supplies and food.This includes a dozen sacks offlour,
+                                                                                                        several casks ofsalted pork, two kegs ofstrong ale,
+                        In the city of Neverwinter,   a dwarf named Gundren                             shovels, picks, and crowbars (about a dozen each), and
+                                                                                                        fivelanterns with a small barrel ofoil (about fiftyflasks in
+                        Rockseeker   asked you to bring a wagon load of provisions        to            volume).The total value ofthe cargo is 100 gp.
+                        the rough-and-tumble      settlement   of Phandalin,   a couple  of               When you're ready, continue with the "Goblin
+                        days' travel southeast   of the city. Gundren    was clearly excited            Ambush" section.
+                        and more than a little secretive    about  his reasons   for the trip,          GOBLIN AMBUSH
+                        saying only that he and his brothers     had found "something
+                        big," and that he'd pay you ten gold pieces each for escorting                  Read the following boxed text to start the encounter:
+                        his supplies  safely to Barthen's   Provisions,  a trading  post in
+                        Phandalin.   He then set out ahead of you on horse, along with                    You've been on the Triboar Trail for about      half a day. As you
+                        a warrior  escort named Sildar Haliwinter,     claiming   he needed               come around a bend, you spot two dead horses           sprawled
+                        to arrive early to "take care of business."                                       about fifty feet ahead   of you, blocking   the path.  Each has
+                         You've spent the last few days following      the High Road                      several  black-feathered   arrows   sticking out of it. The woods
+                        south  from Neverwinter,     and you've just recently veered    east              press  close to the trail here, with a steep   embankment      and
+                        along the Triboar Trail. You've encountered       no trouble  so far,             dense   thickets on either  side.
+                        but this territory can be dangerous.     Bandits  and outlaws    have
+                        been known to lurk along the trail.                                             Ifyou are using the "Meet Mein Phandalin" adventure
+                                                                                                        hook, then any character who approaches to make a
+                     Before continuing with the adventure, take a fewminutes                            closer investigation can identify the horses as belonging
+                     to do the following:                                                               to Gundren Rockseeker and Sildar Hallwinter. They've
+                                                                                                        been dead about a day,and it's clear that arrows killed the
+                     • Encourage the players to introduce their characters to                           horses. When the characters inspect the scene closer, read
+                        each other ifthey haven't done so already.                                      the following:
+                        Askthe players to think about how their characters
+                        came to know their dwarf patron, Gundren Rockseeker.                              The saddlebags     have been looted.    Nearby lies an empty            1
+                        Let the players concoct their own stories. If a player is                         leather  map case.
+                        hard-pressed to think ofanything, suggest something                            1
+                        simple. For example, Gundren could be a childhood
+                        friend or someone who helped the player's character                             Four goblins al~hlding in the woods, two on each side of
+                        get out ofa tough scrape. This exercise is a great oppor-                       the road. They wait until someone approaches the bodies
+                        tunity for the players to contribute to the adventure's                         and then attack.
+                        backstory.                                                                        This will likelybe the first ofmany combat encounters in
+                     • Askthe players to giveyou the party's marching order                             the adventure. Here are the steps you should followto run
+                        and how their characters are traveling. Who's in front,                         it effectively:
+                        and who's bringing up the rear? Ifthe characters are
+              6
+                           PART 1: GOBLIN ARROWS
+                   • Review the goblin stat block in appendix B. Since the                  GOBLIN TRAIL
+                      goblins are hiding, you'll need to know their Stealth skill          After the characters   defeat the goblins, any inspection of the
+                      modifier: +6.                                                        area reveals that the creatures    have been using this place
+                      Check to see who, if anyone, is surprised.    The party can-         to stage ambushes     for some time. A trail hidden behind
+                      not surprise  the goblins, but the goblins might surprise            thickets on the north side of the road leads northwest.      A
+                      some or all the characters.   Make a Dexterity (Stealth)             character  who succeeds on a DC 10 Wisdom (Survival)
+                      check for the goblins, rolling once for all of them. Roll            check recognizes    that about a dozen goblins have come and
+                      a d20, add the goblins' Stealth skill modifier (+6) to the           gone along the trail, as well as signs of two human-sized
+                      roll, and compare the result to the characters'    passive           bodies being hauled away from the ambush site.
+                     Wisdom (Perception)      scores. Any character   whose score             The party can easily steer the wagon away from the road
+                      is lower than the goJ1i-fls.:c.heck result is surprised and          and tie off the oxen while the group pursues      the goblins.
+                      loses his or her turn during the first round of combat                 The trail leads five miles northwest    and ends at the
+                      (see "Surprise"  in the rulebook).                                   Cragmaw hideout (see that section). Ask the players to
+                   • Use the initiative rules in the rulebook to determine      who        determine   the party's marching    order as the characters
+                      acts first, second, third, and so on. Keep track of every-           move down the trail. The order is important,      because the
+                      one's initiative count in the margins   of this book or on a         goblins have set two traps to thwart pursuers.
+                      separate  piece of paper.                                              Snare. About 10 minutes after heading down the trail,
+                   • When the time comes for the goblins to act, two of them               a party on the path encounters     a hidden snare. If the
+                      rush forward and make melee attacks while two goblins                characters   are searching   for traps, the character  in the
+                      stand 30 feet away from the party and make ranged                    lead spots the trap automatically    if his or her passive
+                      attacks. The goblins' stat block contains the information            Wisdom (Perception) score is 12 or higher. Otherwise,        the
+                     you need to resolve these attacks. For more information               character  must succeed on a DC 12 Wisdom (Perception)
+                     on what the goblins can do on their turn, see chapter 2,              check to notice the trap. If the character   fails to notice the
+                      "Combat," in the rulebook.                                           trap, he or she triggers  the snare and must succeed on a
+                   • When three goblins are defeated, the last goblin                      DC 10 Dexterity saving throw. On a failure, the character
+                     attempts   to flee, heading for the goblin trail.                     is suspended   upside down 10 feet above the ground. The
+                   DEVELOPMENTS                                                            character  is restrained  until 1 or more slashing   damage is
+                   In the unlikely event that the goblins defeat the                       dealt to the snare's  cord. (See the appendix in the rulebook
+                   adventurers,   they leave them unconscious,     loot them and           for the effect of being restrained.)  Acharacter   who isn't
+                   the wagon, then head back to the Cragmaw hideout. The                   carefully lowered down takes Id6 bludgeoning         damage
+                   characters   can continue on to Phandalin,     buy new gear at          from the fall.
+                   Barthen's   Provisions,  return to the ambush site, and find              Pit. Another 10 minutes down the trail is a pit the
+                   the goblins' trail.                                                     goblins have camouflaged.     The pit is 6 feet wide, 10 feet
+                     The characters    might capture one or more goblins by                deep, and it triggers when a creature     moves across it. The
+                   knocking them unconscious       instead of killing them. A              character  in the lead spots the hidden pit automatically
+                   character  can use any melee weapon to knock a goblin                   if his or her passive Wisdom (Perception)      score is 15 or
+                   unconscious,   succeeding    if the attack deals enough                 higher. Otherwise,   the character   must succeed on a DC
+                   damage to drop the goblin to 0 hit points. Once it regains              15 Wisdom (Perception)      check to spot the hidden pit. If
+                   consciousness    after a few minutes, a captured    goblin              the trap isn't detected, the lead character   must succeed
+                   can be convinced to share what it knows (see the "What                  on a DC 10 Dexterity saving throw or fall in, taking Id6
+                   the Goblins Know" sidebar on page 8). A goblin can also                 bludgeoning    damage. The pit's walls are not steep, so no
+                   be persuaded    to lead the party to the Cragmaw hideout                ability check is required  to scramble   out.
+                   while avoiding traps along the way (see the "Goblin                     AWARDING EXPERIENCE                      POINTS
+                   Trail" section).
+                     The characters    might not find the goblin trail, or they            Defeating the goblin ambushers      and finding the Cragrnaw
+                   could decide to continue to Phandalin.     In that case, skip           hideout completes a story milestone. When the party
+                   ahead to part 2, "Phandalin."    Elmar Barthen (the owner               arrives at the hideout, award each character      75 XP. Make
+                   of Barthen's  Provisions)  seeks out the characters    and              sure the players record this gain on their character     sheets.
+                   informs them that Gundren Rockseeker         never arrived.
+                   He recounts   the goblin troubles and suggests that the                 CRAGMAW HIDEOUT
+                   characters  return  to the ambush site to investigate   further         The Cragmaw tribe of goblins has established        a hideout
+                   (after they rest). Barthen  also tells the party that Linene            from which it can easily harass    and plunder traffic moving
+                   Graywind of the Lionshield Coster (see page 16) can                     along the Triboar Trail or the path to Phandalin.     The
+                   provide more information     on the goblin attacks.                     Cragrnaw tribe is so named because each member of the
+                     RESTS                                                                 tribe sharpens   its teeth so they appear fierce and jagged.
+                                                                                             The leader of the Cragmaw bandits lairing here is a
+                    The party might need to rest after the goblin ambush,                  bugbear named Klarg, who has orders from the chief of
+                    depending on how the battle plays out. See the rulebook for            the Cragmaws to plunder any poorly defended caravans or
+                     more information on short rests and long rests.                       travelers that come this way. A few days ago, a messenger
+                                                                                           from Cragmaw Castle brought new instructions:        Waylay the
+                                                                                           dwarf Gundren Rockseeker and anyone traveling with him.
+                                                                                                                                                                 7
+                                                                                                                             PART 1: GOBLIN ARROWS
+                        GENERAL FEATURES                                                                                         to do next, setting up a camp, cutting down brush, and so
+                                                         ---------------------------                                             on-the       goblins in area 2 notice and attack them through
+                       The Cragmaw cave slopes steeply upward. The entrance is                                                   the thicket, which provides the goblins with three-quarters
+                        at the foot of a good-sized hill, and the caves and passages                                             cover (see the rule book for rules on cover).
+                        are inside the hill itself.
+                           Ceilings. Most of the caves and passages                            have steeply                      2. GOBLIN                   BLIND
+                       sloping ceilings that create stalactite-covered                            vaults rising                  When the characters                cross to the east side of the stream,
+                        20 to 30 feet above the floor.                                                                           they can see around the screening                        thickets     to area 2. This
+                           Light. Areas 1 and 2 are outside. The rest of the complex                                             is a goblin guard post, though the goblins here are bored
+                       is dark unless stated otherwise.                     The boxed text for those                             and inattentive.
+                       locations       assumes        that the characters             have darkvision            or a
+                       light source.
+                           Rubble. Areas of crumbling rock and gravel are difficult                                                 On the east side of the stream               flowing    from the cave mouth,             a
+                       terrain      (see "Difficult Terrain" in the rulebook).                                                      small    area   in the briar thickets        has been hollowed           out to form
+                           Sound. The sound of water in the cave muffles noises to                                                  a lookout     post    or blind.    Wooden       planks    flatten    out the briars
+                       any creatures           that aren't listening           carefully. Creatures             can                 and provide       room for guards          to lie hidden      and watch the
+                       make a DC 15Wisdom (Perception) check to attempt to
+                       hear activity in nearby chambers.                                                                            area-including          a pair of goblins        lurking   there    right   now!
+                           Stalagmites. These upthrust spires of rock can provide
+                       cover (see "Cover" in the rulebook).                                                                      Two goblins are stationed here. If the goblins notice
+                           Stream. The stream that flows through the complex is                                                  intruders       in area 1, they open fire with their bows,
+                       only 2 feet deep, cold, and slow moving, allowing creatures                                               shooting through the thickets and probably catching the
+                       to easily wade through it.                                                                                characters        by surprise.        If the goblins don't notice the
+                                                                                                                                 adventurers         in area 1, they spot them when they splash
+                         WHAT THE GOBLINS                    KNOW                                                                across the stream, and neither side is surprised.
+                          If the  characters     capture     or charm      any of the goblins        here, the                      Characters         moving carefully or scouting ahead might be
+                         goblins     can be persuaded          to divulge     some useful information:                           able to surprise          the goblin lookouts. Have each character
+                                                                                                                                 who moves ahead make a Dexterity (Stealth) check
+                             Fewer than twenty goblins             currently    dwell in the lair.                               contested       by the goblins' passive Wisdom (Perception)
+                         • Their leader       is a bugbear       named     Klarg. He answers          to King                    score to avoid being surprised.                    See the rulebook for more
+                            Grol, chief of the Cragmaw             tribe,   who dwells in Cragmaw                                information         on ability check contests.
+                            Castle.    (The goblins       can provide      basic directions       to Cragmaw                        Thickets. The thickets around the clearing are difficult
+                            Castle.    It's about    twenty    miles northeast        of the Cragmaw                             terrain,     but they aren't dangerous-just                     annoying. They
+                            hideout,     in Neverwinter        Wood.)
+                         •   Klarg received      a messenger        goblin    from King Grol a few                               provide half cover to creatures                   attacking       through them.
+                            days ago. The messenger              told   him that someone           named     the                 (See "Difficult Terrain" and "Cover" in the rulebook for
+                            Black Spider was paying the Cragmaws                     to watch out for the                        more information.)
+                            dwarf Gundren          Rockseeker,      capture     him, and send him and
+                            anything      he was carrying       back to King Grol. Klarg followed                                3. KENNEL
+                            his orders.     Gundren       was ambushed          and taken along with his                         The Cragmaws keep a kennel of foul-tempered                                 wolves that
+                            personal      effects,   including     a map.
+                         • The dwarf and his map were delivered                    to King Grol, as                              they are training for battle.
+                            instructed.     The dwarf's       human      companion        is being    held in
+                            the "eating      cave"    (area   6).                                                                  Just   inside    the cave mouth,         a few uneven        stone    steps    lead
+                                                                                                                                    up to a small,      dank chamber          on the east side of the passage.
+                       1. CAVE MOUTH                                                                                               The cave narrows           to a steep     fissure    at the far end, and is filled
+                       The trail from the goblin ambush site leads to the entrance                                                 with the stench         of animals.      Savage     snarls    and the sounds         of
+                       of the Cragmaw hideout.                                                                                      rattling   chains    greet    your ears where two wolves               are chained
+                                                                                                                                    up just    inside   the opening.        Each wolf's      chain    leads   to an iron
+                          Following      the goblins'      trail,  you come across          a large cave in                         rod driven     into the base of a stalagmite.
+                          a hillside    five miles from the scene             of the ambush.        A shallow
+                          stream     flows out of the cave mouth,               which is screened          by                   Three wolves are confined here. They can't reach
+                          dense     briar thickets.      A narrow      dry path leads       into the cave on                     targets standing           on the steps, but all three attack any
+                                                                                                                                creature       except a goblin that moves into the room (see the
+                          the right-hand        side of the stream.                                                              "Developments"             section). Goblins in nearby caves ignore
+                                                                                                                                the sounds of fighting wolves, since they constantly                                snap
+                       The thicket in area 2 is impenetrable                        from the west side                          and snarl at each other.
+                       of the stream.                                                                                              Acharacter          who tries-to calm the animals can attempt
+                                                                                                                                a DC 15 Wisdom (Animal Handling) check. On a success,
+                       DEVELOPMENTS                                                                                             the wolves allow the character                     to move throughout              the
+                       The goblins in area 2 are supposed                        to be keeping watch                            room. If the wolves are given food, the DC drops to 10.
+                       on this area, but they are not paying attention. (Goblins                                                   Fissure. Anarrow opening in the east wall leads to a
+                       can be lazy that way.) However, if the characters                              make a                    natural      chimney that climbs 30 feet to area 8. At the base
+                       lot of noise here-for              example, loudly arguing about what                                    of the fissure is rubbish that's been discarded                            through
+              8
+                              PART 1: GOBLIN ARROWS
+                                                                                                                                                                         CRAGMAW
+                                                                                                                                                                          HIDEOUT
+                           the opening above. A character                  attempting        to ascend or                       ADVENTURE           MAPS
+                           descend the chimney shaft must make a DC 10 Strength                                                 Maps that appear        in this  adventure      are for the DM's eyes only.
+                           (Athletics) check. If the check succeeds,                     the character                          Amap not only shows an adventure                 location   in its entirety   but
+                            moves at half speed up or down the shaft, as desired. On a                                          also shows secret       doors,    hidden    traps,  and other elements         the
+                           check result of 6-9, the character                  neither     gains nor loses                      players   aren't   meant    to see-hence        the need for secrecy.
+                           ground; on a result of 5 or less, the character                      falls and                          Maps are best used to show multiroom                 lairs and other
+                           takes Id6 bludgeoning               damage per 10 feet fallen, landing                               locations    that  have many places to explore. Therefore,               not every
+                           prone at the base of the shaft.                                                                      location   needs    a map.
+                                                                                                                                  When the players arrive at a location             marked     on a map, you
+                           DEVELOPMENTS                                                                                         can either    rely on a verbal description        to give them      a clear
+                           If the wolves are goaded by enemies beyond their reach,                                              mental    picture   of the location,     or you can draw what they see
+                           they are driven into a frenzy that allows them to yank the                                           on a separate      piece of graph      paper,  copying     what's   on your map
+                           iron rod securing          their chains out of the floor. Each round                                 while omitting      details  as appropriate.
+                           that any character          remains in sight, the wolves attempt                                       Scale and Grid. A scale allows you to measure                  distances
+                           a single DC 15 Strength              check. On the first success,                                    and dimensions        accurately,    which is important        for combat
+                           they loosen the rod and the DC drops to 10. On a second                                              encounters,     magical     effects,  and light sources,       among other
+                           success,      they yank the rod loose, bending it so that their                                      things.   Indoor    maps use grid squares          that  are either   5 feet on a
+                                                                                                                                side or 10 feet on a side.
+                           chains are freed.                                                                                      Compass Rose.A compass               rose comes      in handy when you're
+                              Agoblin or bugbear can use its action to release one                                              describing    locations.    For instance,     you might need to tell
+                           wolf from its chain.                                                                                 players   about   "barrels    along the north wall" or "the staircase
+                                                                                                                                descending      to the west."
+                           4. STEEP PASSAGE
+                           From this point on, characters                 without darkvision will                             Characters       using light or darkvision             to look farther        up the
+                           need light to see their surroundings.                                                              passage      spot the bridge at area 5. Add:
+                              The main passage          from the cave mouth          climbs    steeply                           In the shadows       of the ceiling    to the north,     you can just make
+                              upward,     the stream      plunging    and splashing       down its west                          out the dim shape        of a rickety    bridge   of wood and rope
+                              side.   In the shadows,       a side passage       leads  west across      the                     crossing    over the passage        ahead    of you. Another       passage
+                              other   side of the stream.                                                                        intersects    this  one, twenty      feet  above the floor.
+                                                                                                                                                                                                                             9
+                                                                                                                                                                            PART 1: GOBLIN          ARROWS
+                       Any character          who can see the bridge in area 5 might also                                  FLOOD!
+                       notice the goblin guarding                the bridge. Doing so requires                             The large pools in area 7 have collapsible                       walls that can
+                       a Wisdom (Perception)                check contested          by the goblin's                       be yanked out of place to release                   a surge of water down
+                       Dexterity       (Stealth)     check result.                                                         the main passage            of the lair. In the round after the goblins
+                          The goblin notices the characters                    if they carry any light                     in area 7 are signaled             by the lookout in area 5, they start
+                       or don't use stealth           as they approach          the bridge. The                            knocking        away the supports.            In the following round on the
+                       goblin does not attack. Instead,                 it attempts      to sneak away                     goblins' initiative         count, a water surge pours from area 7
+                       to the east to inform its companions                     in area 7 to release                       down to area 1.
+                       a flood (see the "Flood!" section                 of area 5). The goblin
+                       moves undetected             if its Dexterity       (Stealth)     check exceeds                        The passage       is suddenly      filled with a mighty       roar,  as a huge          1
+                       the passive Wisdom (Perception)                     score of any character
+                       who might notice its movements.                                                                     1 surge of rushing         water   pours    down from above!
+                           Western Passage. This passage is choked with rubble
+                       and has steep escarpments.                  Treat the area as difficult                             The flood threatens             all creatures       in the tunnel. (Creatures
+                       terrain     (see "Difficult Terrain"           in the rulebook).                                    on the bridge at area 5 are out of danger, as are any
+                          The ledge between the two escarpments                           is fragile. Any                  characters        successfully       climbing the cavern walls.) Any
+                       weight in excess of 100 pounds loosens the whole mass                                               creature      within     10 feet of the disused            passage      at area
+                       and sends it tumbling              down to the east. Any creature                                   4 or the steps leading up to area 3 can attempt a DC 10
+                       on the ledge when it falls must make a DC 10 Dexterity                                              Dexterity       saving throw to avoid being swept away. A
+                       saving throw, taking 2d6 bludgeoning                       damage on a failure,                     creature      that fails to get out of the way can attempt                     a DC
+                       or half as much damage on a success.                       The creature                             15 Strength         saving throw to hold on. On a failed save, the
+                       also falls prone on a failed save (see "Being Prone" in                                             character       is knocked prone and washed down to area 1,
+                       the rulebook).                                                                                      taking     Id6 bludgeoning            damage along the way.
+                       5. OVERPASS                                                                                            The goblins in area 7 can release                   a second flood by
+                                                                                                                           opening the second pool, but they don't do this unless the
+                       Where a high tunnel passes through the larger tunnel                                                goblin on the bridge tells them to. The goblin on the bridge
+                       cavern below, the goblins have set up a bridge guard post.                                          waits to see if the first flood got rid of all the intruders
+                          The stream       passage     continues     up beyond       another    set of           I         before calling for the second to be released.
+                                                                                                                           6. GOBLIN                  DEN
+                          uneven     steps   ahead,    bending     eastward      as it goes.    Awaterfall                 The Cragmaw raiders stationed                     in the hideout use this
+                      I   sounds     out from a larger cavern          somewhere        ahead    of you.                   area as a common room and barracks.
+                       If the characters         didn't spot the bridge while navigating                                      This large cave is divided          in half by a ten-foot-high
+                       area 4, they spot it now. Add:                                                                         escarpment.       A steep     natural   staircase    leads   from the lower
+                          A rickety    bridge   spans    the passage,       connecting      two tunnels          1            portion    to the upper      ledge.   The air is hazy with the smoke             of
+                                                                                                                              a cooking     fire, and pungent        from the smell of poorly cured
+                      1 that are 20 feet above the stream.                                                                    hides   and unwashed         goblins.
+                       One goblin stands watch on the bridge. It is hiding,                                                Six goblins        inhabit this den, and one of them is a leader
+                       and characters          can spot it by succeeding              on a Wisdom                          with 12 hit points. The five ordinary                   goblins tend the
+                       (Perception)        check contested          by the goblin's Dexterity                              cooking fire in the lower (northern)                   part of the cave near
+                       (Stealth)     check. This guard is lazy and inattentive.                      If no                 the entrance        passage,      while the leader rests in the upper
+                       characters       are using light sources,             each character          can                   (southern)       part of the cave.
+                       attempt      a Dexterity       (Stealth)     check against the goblin's                                Sildar     Hallwinter,        a human warrior, is held prisoner
+                       passive Wisdom (Perception)                   score to creep by without                             in this chamber. He is securely bound on the southern
+                       being noticed.                                                                                      ledge of the cavern. The goblins have been beating and
+                          If the goblin spots the adventurers,                   it signals    the goblins                 tormenting        him, so he is weak and at 1 hit point.
+                       in area 7 to release          a flood (see the "Flood!" section), then                                 The goblin leader, Yeemik, is second-in-command
+                       throws javelins         down at the characters.                                                     of the whole hideout. If he sees that the characters                           are
+                          Bridge. This bridge spans the passage                        20 feet above the                   getting the upper hand, he grabs Sildar and drags him
+                       stream.     It's possible       to climb up the cavern walls from the                               over to the edge of the upper level. "Truce, or this human
+                       lower passage          to the bridge. The 20-foot-high                 walls are                    dies!" he shouts.
+                       rough but slick with spray, requiring                    a successful        DC 15                     Yeemik wants to oust Klarg and become the new boss. If
+                       Strength       (Athletics)     check to climb.                                                      the adventurers          agree to parley, Y~e.mik tries to(co~vince
+                          The bridge has an Armor Class (AC) of 5 and 10 hit                                               them to kill Klarg in area 8, prormsing                     to release      Sildar
+                       points. If the bridge is reduced                to 0 hit points,       it collapses.                when they bring back the bugbear's                      head. Sildar groggily
+                       Creatures       on the collapsing          bridge must succeed on a DC                              warns the characters             that they shouldn't           trust   the goblin,
+                       10 Dexterity        saving throw or fall, taking 2d6 bludgeoning                                    and he's right. If the characters                take the deal, Yeemik tries
+                       damage and landing prone (see "Being Prone" in the                                                  to force them to pay a rich ransom                    for Sildar     even after
+                       rulebook).      Those who succeed hold onto the bridge and                                          they complete their part of the bargain.
+                       must climb it to safety.
+             10
+                              PART 1: GOBLIN ARROWS
+                               If the characters           refuse to parley, Yeemik shoves Sildar                                     DEVELOPMENTS
+                            over the edge and continues with the fight. Sildar takes                                                  If he is rescued         and healed, Sildar Hallwinter                     remains
+                            Id6 bludgeoning             damage from the fall, which is enough to                                     with the party but is anxious to reach Phandalin                                as quickly
+                            drop him to 0 hit points. Quick-acting characters                               can try                   as possible. He doesn't have any weapons or armor, but
+                            to stabilize       him before he dies (see "Damage, Healing, and                                          he can take a shortsword                  from a defeated goblin or use a
+                            Dying" in the rulebook).                                                                                 weapon loaned to him by a character.
+                                                                                                                                         If Sildar joins the party, see the "NPC Party Members"
+                            ROLE PLAYING SILDAR                                                                                       sidebar for tips on how to run him.
+                            Sildar ~nter                  is a kindhearted           human male of nearly
+                            fifty years who holds a place of honor in the famous                                                      TREASURE
+                            griffon cavalry of the great city of Water deep. He is an                                                Yeemik carries a pouch containing                         three gold teeth (1
+                            agent of the Lords' Alliance, a group of allied political                                                 gp each) and 15 sp. Sildar's                 gear, along with Gundren
+                            powers concerned with mutual security and prosperity.                                                     Rockseeker,         was taken to Cragmaw Castle.
+                            Members of the order ensure the safety of cities and other
+                            settlements         by proactively eliminating                 threats     by any
+                            means, while bringing honor and glory to their leaders                                                      NPC      PARTY MEMBERS
+                            and homelafds.                                                                                              An NPC might join the party, if only for a short time.                     Here are
+                               Sildar me\ Gundren Rockseeker                         in Neverwinter            and                      some tips to help you run an NPC party member:
+                            agreed to accpmpany him back to Phandalin.                                Sildar wants                      o  Let the characters        make the important           decisions.     They are the
+                            to investigate the fate of larno Albrek, a human wizard and                                                    protagonists       of the adventure.        If the characters       ask an NPC
+                            fellow membe~of the Lords' Alliance who disappeared                                                            party member         for advice or direction,         remember       that   NPCs
+                            shortly after arriving in Phandalin.                      Sildar hopes to learn                                make mistakes         too.
+                            what happened to larno, assist Gundren in reopening                                     the                 o  An NPC won't deliberately             put himself      or herself     in harm's
+                            old mine, and help restore Phandalin                         to a civilized center                             way unless      there's   a good reason         to do so.
+                            of wealth and prosperity.                                                                                      An NPC won't treat all party members                   the same way, which
+                               Sildar provides the characters                    with four pieces of useful                                can create     some fun friction.        As an NPC gets to know the
+                                                                                                                                           characters,     think   about    which characters         the NPC likes most
+                            information:                                                                                                   and which ones the NPC likes least, and let those                      likes and
+                            o  The three Rockseeker                 brothers       (Gundren, Tharden, and                                  dislikes   affect   how the NPC interacts            with the party members.
+                               Nundro) recently located an entrance to the long-lost                                                       In a combat       encounter,      keep the NPC's actions            simple    and
+                               Wave Echo Cave, site of the mines of the Phandelver's                                                       straightforward.       Also, look for things         that  the NPC can do
+                               Pact. (Share the information                    in the first two paragraphs                                 besides    fighting.    For example,       an NPC might stabilize            a dying
+                                                                                                                                           character,    guard    a prisoner,     or help barricade         a door.
+                               of the "Background"               section to the players at this time.)                                  o  If an NPC contributes           greatly   to the party's     success     in a
+                               Klarg, the bugbear who leads this goblin band, had                                                          battle,  the NPC should          receive    an equal share ofthe           XP
+                               orders to waylay Gundren. Sildar heard from the goblins                                                     earned    for the encounter.         (The characters        receive    less XP as a
+                               that the Black Spider sent word that the dwarf was to                                                       consequence.)
+                               be brought to him. Sildar doesn't know who or what the                                                   o  NPCs have their own lives and goals. Consequently,                        an NPC
+                               Black Spider is.                                                                                            should    remain     with the party only as long as doing so makes
+                            o  Gundren had a map showing the secret location ofWave                                                        sense    for those    goals.
+                               Echo Cave, but the goblins took it when they captured
+                               him. Sildar believes that Klarg sent the map and the                                                   7. TWIN POOLS CAVE
+                               dwarf to the chief of the Cragmaws                        at a place called
+                               Cragmaw Castle. Sildar doesn't know where that might                                                   If the goblins have drained either pool to flood the
+                               be, but he suggests             someone in Phandalin                  might know.                     passage,        adjust the following boxed text accordingly.
+                               (It doesn't occur to Sildar immediately, but a captured
+                               goblin might also be persuaded                     to divulge the castle's                               This cavern       is half filled with two large pools              of water.    A
+                               location. See the "What the Goblins Know" sidebar on
+                               page 8.)                                                                                                  narrow     waterfall    high in the eastern         wall feeds      the   pool,   which
+                               Sildar's      contact in Phandalin               is a human wizard named                                  drains    out the western        end of the chamber            to form the stream
+                               Iarno Albrek. The wizard traveled to the town two                                                        that   flows out of the cave mouth               below.     Low fieldstone       walls
+                               months ago to establish order there. After the Lords'                                                     serve   as dams      holding     the water      in. A wide exit stands          to the
+                               Alliance received no word from Iarno, Sildar decided to                                                   south,    while two smaller         passages       lead west.     The sound        of
+                               investigate.
+                            Sildar tells the characters                that he intends to continue on                                   the waterfall       echoes     through     the cavern,       making     it difficult
+                            to Phandalin,          since it's the nearest            settlement.        He offers                       to hear.
+                            to pay the party 50 gp to provide escort. Although he has
+                            no money on him, Sildar can secure a loan to pay the                                                     Three goblins guard this cave. If the goblin in area 5
+                            characters        within a day after arriving in Phandalin.                          First,              spotted the characters                and warned the goblins here, they
+                            he hopes they'll put a stop to the goblin raids by clearing                                               are ready for trouble. The noise of the waterfall means that
+                            out the caves.                                                                                           the creatures          in area 8 can't hear any fighting that takes
+                                                                                                                                     place here, and vice versa. Therefore,                        as soon as a fight
+                                                                                                                                     breaks out here, one goblin flees to area 8 to warn Klarg.
+                                                                                                                                                                                                                                           11
+                                                                                                                                                                                       PART 1: GOBLIN ARROWS
+ ~----------------------------------------------------------------                                                                -------
+                        Rock Dams. The goblins built simple dams to control                                              DEVELOPMENTS
+                     the flow of water through the heart of the complex. If the                                          If Klarg is warned by the goblins in area 7 that the hideout
+                     goblin sentry in area 5 has called for the goblins here to                                          is under attack, he and his wolf hide behind stalagmites
+                     release     a flood, one or both of the pools are mostly empty                                      while the goblins take cover behind the piles of supplies,
+                     and the stream is flowing unimpeded.                                                                hoping to ambush the characters                    when they enter the cave.
+                      8. KLARG'S CAVE                                                                                       If Klarg and company are not warned about possible
+                                                                                                                         attackers,     the characters         have a good chance to surprise
+                     The leader of the goblinoids insists on keeping the bulk                                            them. The easiest way for the characters                      to achieve this
+                     of the raiders'       stolen goods in his den. The Cragmaws'                                        is to climb the chimney from area 3, since Klarg does not
+                     plunder from the last month of raiding and ambushing                                                expect an attack from that direction.
+                     caravans       is here.                                                                                If the wolf is killed, the bugbear               attempts      to climb down
+                                                                                                                         the chimney to area 3 and flee the cave complex.
+                        Sacks and crates        of looted    provisions     are piled up in the                         TREASURE
+                        south    end of this large cave_ To the west, the floor slopes                                   The captured stores are bulky, and the characters                            will
+                        toward    a narrow     opening     that   descends     into darkness.       A                    need a wagon to transport                them. If they return the
+                        larger   opening     leads   north   down a set of natural         stone    steps,               supplies to the Lionshield              Coster in Phandalin             (see part
+                        the roar of falling water        echoing     from beyond.       In the middle                    2, "Phandalin''),        they earn a reward of 50 gp and the
+                                                                                                                        friendship       of Linene and her company.
+                        of the cavern,     the coals ofa       large fire smolder.                                          In addition to the stolen provisions, Klarg has a treasure
+                                                                                                                         chest that contains 600 cp, 110 sp, two potions of healing,
+                     Klarg the bugbear shares this cave with his mangy pet                                               and ajade statuette           of a frog with tiny golden orbs for
+                     wolf, Ripper, and two goblins. The bugbear is filled with                                           eyes (40 gp). The frog statuette                is small enough to fit in a
+                     delusions       of grandeur       and views himself as a mighty                                    pocket or pouch.
+                     warlord just beginning              his career of conquest. He is not                              WHAT'S NEXT?
+                     entirely sane, referring            to himself in the third person
+                     ("Who dares defy Klarg?" or "Klarg will build a throne                                             The next stage of the adventure                   takes place in Phandalin.
+                                                                from your bones, puny                                   The adventurers            should have plenty of reasons to visit
+                                                                ones!"). The goblins under his                           the town:
+                                                                command resent his bullying.                            • If the characters           began with the "Meet Me in Phandalin"
+                                                                 Fire Pit. The hot coals in                                 adventure       hook, they can be paid by Barthen's
+                                                                the central fire pit deal 1 fire                           Provisions        for delivering       the wagonload of supplies.
+                                                                damage to any creature               that               • If the characters           rescued Sildar Hallwinter, the
+                                                                enters the fire pit, or 1d6 fire                           wounded warrior would appreciate an escort to
+                                                                damage to any creature that                                 Phandalin       (and will pay 50 gp for the service).
+                                                                falls prone there. A creature                               Details contained within the characters'                      backgrounds
+                                                                can take each type of damage                               might prompt them to seek out specific NPCs in the town.
+                                                                only once per round.
+                                                                 Natural Chimney. A niche                               It's also possible         that players might decide to do
+                                                                in the western wall forms the                           something         different, such as striking out in search of
+                                                                top of a shaft that descends               30           Cragmaw Castle (in part 3 of the adventure). If that's the
+                                                                feet to area 3. See that area for                       case, skip ahead to that section.
+                                                                information        on climbing the
+                                                                natural     chimney.                                    AWARDING EXPERIENCE                          POINTS
+                                                                  Supplies. The piles of sacks                          Exploring the Cragmaw hideout and defeating Klarg
+                                                                and crates can provide half                             and his allies completes              a story milestone; Award each
+                                                                cover to any creature            fighting               character       275 XP. This should provide enou~                       XP for the
+                                                                or hiding behind them. Most                             characters        to attain    2nd level.                              \
+                                                                are marked with the image of                               Level advancement              rules for characters           are provided on
+                                                                a blue lion--the        symbol of the                   loose sheets included in this set. Hand these sheets to the
+                                                                Lionshield       Coster, a merchant                     players, and allow them to advance their characters                             to 2nd
+                                                                company with a warehouse                                level before continuing             the adventure.         Make sure they've
+                                                                and trading post in Phandalin.                          recorded       their XP totals on their character                  sheets.
+                                                                 Hidden among the supplies                                 In the next part of the adventure, you'll award XP
+                                                                is an unlocked treasure              chest              differently. The characters              will earn experience             points
+                                                                belonging to Klarg (see the                             based on the monsters               and traps they overcome, the NPCs
+                                                                "Treasure"       section). Any                          they interact with, and the goals they accomplish.
+                                                                character      who searches          the                   If the adventurers           come up with a nonviolentway                    to
+                                                                supplies     finds the chest.                           neutralize       the threat that a monster poses, award them
+                                                                                                                        experience        points as if they had defeated it.
+            12
+                            PART 1: GOBLIN          ARROWS

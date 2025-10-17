@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
+                   id="Definitions_DnD_Skills" 
+                   targetNamespace="http://bpmn.io/schema/bpmn" 
+                   exporter="Claude BPMN Analyst" 
+                   exporterVersion="1.0">
+  
+  <bpmn:collaboration id="Collaboration_DnD_SkillResolution">
+    <bpmn:participant id="Participant_DM" name="D&amp;D Skill Resolution System" processRef="Process_SkillCheck" />
+  </bpmn:collaboration>
+  
+  <bpmn:process id="Process_SkillCheck" name="Determine Skill Check" isExecutable="false">
+    
+    <!-- Start Event -->
+    <bpmn:startEvent id="StartEvent_Intent" name="Player declares intent">
+      <bpmn:outgoing>Flow_Start_To_IntentGateway</bpmn:outgoing>
+    </bpmn:startEvent>
+    
+    <!-- Main Intent Gateway -->
+    <bpmn:exclusiveGateway id="Gateway_MainIntent" name="What do you want to do?">
+      <bpmn:incoming>Flow_Start_To_IntentGateway</bpmn:incoming>
+      <bpmn:outgoing>Flow_Intent_BeStrong</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Intent_RunJump</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Intent_BeSneaky</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Intent_Persuade</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Intent_Impress</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Intent_Know</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Start_To_IntentGateway" sourceRef="StartEvent_Intent" targetRef="Gateway_MainIntent" />
+    
+    <!-- Be Strong Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_BeStrong" name="Be Strong" sourceRef="Gateway_MainIntent" targetRef="EndEvent_Athletics">
+      <bpmn:conditionExpression>intent == "be_strong"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:endEvent id="EndEvent_Athletics" name="Athletics (STR)">
+      <bpmn:incoming>Flow_Intent_BeStrong</bpmn:incoming>
+      <bpmn:incoming>Flow_Backflip_To_Athletics</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <!-- Run Jump Climb Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_RunJump" name="Run, Jump or Climb" sourceRef="Gateway_MainIntent" targetRef="Gateway_DifficultFooting">
+      <bpmn:conditionExpression>intent == "run_jump_climb"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_DifficultFooting" name="Is the footing difficult?">
+      <bpmn:incoming>Flow_Intent_RunJump</bpmn:incoming>
+      <bpmn:outgoing>Flow_Difficult_No</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Difficult_Yes</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Difficult_No" name="No - Do backflip" sourceRef="Gateway_DifficultFooting" targetRef="Gateway_Backflip">
+      <bpmn:conditionExpression>difficult_footing == false</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_Difficult_Yes" name="Yes - Fine motor skills" sourceRef="Gateway_DifficultFooting" targetRef="Gateway_FineMotor">
+      <bpmn:conditionExpression>difficult_footing == true</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_Backflip" name="Backflip outcome">
+      <bpmn:incoming>Flow_Difficult_No</bpmn:incoming>
+      <bpmn:outgoing>Flow_Backflip_To_Athletics</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Backflip_To_SleightOfHand</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Backflip_To_Stealth</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Backflip_To_Athletics" name="Raw strength" sourceRef="Gateway_Backflip" targetRef="EndEvent_Athletics" />
+    
+    <bpmn:sequenceFlow id="Flow_Backflip_To_SleightOfHand" name="Dexterous manipulation" sourceRef="Gateway_Backflip" targetRef="EndEvent_SleightOfHand" />
+    
+    <bpmn:endEvent id="EndEvent_SleightOfHand" name="Sleight of Hand (DEX)">
+      <bpmn:incoming>Flow_Backflip_To_SleightOfHand</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Backflip_To_Stealth" name="Hide movement" sourceRef="Gateway_Backflip" targetRef="EndEvent_Stealth" />
+    
+    <bpmn:endEvent id="EndEvent_Stealth" name="Stealth (DEX)">
+      <bpmn:incoming>Flow_Backflip_To_Stealth</bpmn:incoming>
+      <bpmn:incoming>Flow_MoveUnseen_To_Stealth</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:exclusiveGateway id="Gateway_FineMotor" name="Fine motor context">
+      <bpmn:incoming>Flow_Difficult_Yes</bpmn:incoming>
+      <bpmn:outgoing>Flow_FineMotor_To_Acrobatics</bpmn:outgoing>
+      <bpmn:outgoing>Flow_FineMotor_To_Arcana</bpmn:outgoing>
+      <bpmn:outgoing>Flow_FineMotor_To_Investigation</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_FineMotor_To_Acrobatics" name="Balance &amp; agility" sourceRef="Gateway_FineMotor" targetRef="EndEvent_Acrobatics" />
+    
+    <bpmn:endEvent id="EndEvent_Acrobatics" name="Acrobatics (DEX)">
+      <bpmn:incoming>Flow_FineMotor_To_Acrobatics</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_FineMotor_To_Arcana" name="Magical knowledge" sourceRef="Gateway_FineMotor" targetRef="EndEvent_Arcana" />
+    
+    <bpmn:endEvent id="EndEvent_Arcana" name="Arcana (INT)">
+      <bpmn:incoming>Flow_FineMotor_To_Arcana</bpmn:incoming>
+      <bpmn:incoming>Flow_Clue_To_Arcana</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_FineMotor_To_Investigation" name="Search &amp; analyse" sourceRef="Gateway_FineMotor" targetRef="EndEvent_Investigation" />
+    
+    <bpmn:endEvent id="EndEvent_Investigation" name="Investigation (INT)">
+      <bpmn:incoming>Flow_FineMotor_To_Investigation</bpmn:incoming>
+      <bpmn:incoming>Flow_Clue_To_Investigation</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <!-- Be Sneaky Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_BeSneaky" name="Be Sneaky" sourceRef="Gateway_MainIntent" targetRef="Task_MoveUnseen">
+      <bpmn:conditionExpression>intent == "be_sneaky"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:task id="Task_MoveUnseen" name="Move unseen">
+      <bpmn:incoming>Flow_Intent_BeSneaky</bpmn:incoming>
+      <bpmn:outgoing>Flow_MoveUnseen_To_Stealth</bpmn:outgoing>
+    </bpmn:task>
+    
+    <bpmn:sequenceFlow id="Flow_MoveUnseen_To_Stealth" sourceRef="Task_MoveUnseen" targetRef="EndEvent_Stealth" />
+    
+    <!-- Persuade Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_Persuade" name="Persuade Someone" sourceRef="Gateway_MainIntent" targetRef="Task_LieToSomeone">
+      <bpmn:conditionExpression>intent == "persuade"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:task id="Task_LieToSomeone" name="Lie to someone">
+      <bpmn:incoming>Flow_Intent_Persuade</bpmn:incoming>
+      <bpmn:outgoing>Flow_Lie_To_PersuadeGateway</bpmn:outgoing>
+    </bpmn:task>
+    
+    <bpmn:exclusiveGateway id="Gateway_Persuade" name="How to persuade?">
+      <bpmn:incoming>Flow_Lie_To_PersuadeGateway</bpmn:incoming>
+      <bpmn:outgoing>Flow_Persuade_To_Deception</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Persuade_To_Intimidation</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Persuade_To_Persuasion</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Lie_To_PersuadeGateway" sourceRef="Task_LieToSomeone" targetRef="Gateway_Persuade" />
+    
+    <bpmn:sequenceFlow id="Flow_Persuade_To_Deception" name="Deceive" sourceRef="Gateway_Persuade" targetRef="EndEvent_Deception" />
+    
+    <bpmn:endEvent id="EndEvent_Deception" name="Deception (CHA)">
+      <bpmn:incoming>Flow_Persuade_To_Deception</bpmn:incoming>
+      <bpmn:incoming>Flow_SeeLying_To_Deception</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Persuade_To_Intimidation" name="Threaten" sourceRef="Gateway_Persuade" targetRef="EndEvent_Intimidation" />
+    
+    <bpmn:endEvent id="EndEvent_Intimidation" name="Intimidation (CHA)">
+      <bpmn:incoming>Flow_Persuade_To_Intimidation</bpmn:incoming>
+      <bpmn:incoming>Flow_NotImmediate_To_Intimidation</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Persuade_To_Persuasion" name="Genuine appeal" sourceRef="Gateway_Persuade" targetRef="EndEvent_Persuasion" />
+    
+    <bpmn:endEvent id="EndEvent_Persuasion" name="Persuasion (CHA)">
+      <bpmn:incoming>Flow_Persuade_To_Persuasion</bpmn:incoming>
+      <bpmn:incoming>Flow_InGoodFaith_To_Persuasion</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <!-- Impress Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_Impress" name="Impress Someone" sourceRef="Gateway_MainIntent" targetRef="Gateway_Impress">
+      <bpmn:conditionExpression>intent == "impress"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_Impress" name="How to impress?">
+      <bpmn:incoming>Flow_Intent_Impress</bpmn:incoming>
+      <bpmn:outgoing>Flow_Impress_WithSong</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Impress_WithMuscles</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Impress_InGoodFaith</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Impress_WithSong" name="With a song" sourceRef="Gateway_Impress" targetRef="Gateway_WithSong">
+      <bpmn:conditionExpression>impress_method == "song"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_WithSong" name="Song context">
+      <bpmn:incoming>Flow_Impress_WithSong</bpmn:incoming>
+      <bpmn:outgoing>Flow_Song_To_Clue</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Song_To_Religion</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Song_To_Clue" name="Contains clue" sourceRef="Gateway_WithSong" targetRef="Gateway_Clue" />
+    
+    <bpmn:exclusiveGateway id="Gateway_Clue" name="Type of clue">
+      <bpmn:incoming>Flow_Song_To_Clue</bpmn:incoming>
+      <bpmn:outgoing>Flow_Clue_To_Arcana</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Clue_To_History</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Clue_To_Investigation</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Clue_To_Arcana" name="Magical" sourceRef="Gateway_Clue" targetRef="EndEvent_Arcana" />
+    
+    <bpmn:sequenceFlow id="Flow_Clue_To_History" name="Historical" sourceRef="Gateway_Clue" targetRef="EndEvent_History" />
+    
+    <bpmn:endEvent id="EndEvent_History" name="History (INT)">
+      <bpmn:incoming>Flow_Clue_To_History</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Clue_To_Investigation" name="Forensic" sourceRef="Gateway_Clue" targetRef="EndEvent_Investigation" />
+    
+    <bpmn:sequenceFlow id="Flow_Song_To_Religion" name="Religious hymn" sourceRef="Gateway_WithSong" targetRef="EndEvent_Religion" />
+    
+    <bpmn:endEvent id="EndEvent_Religion" name="Religion (INT)">
+      <bpmn:incoming>Flow_Song_To_Religion</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Impress_WithMuscles" name="With muscles" sourceRef="Gateway_Impress" targetRef="Gateway_WithMuscles">
+      <bpmn:conditionExpression>impress_method == "muscles"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_WithMuscles" name="Muscle context">
+      <bpmn:incoming>Flow_Impress_WithMuscles</bpmn:incoming>
+      <bpmn:outgoing>Flow_Muscles_To_Performance</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Muscles_To_NotImmediate</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Muscles_To_Performance" name="Showmanship" sourceRef="Gateway_WithMuscles" targetRef="EndEvent_Performance" />
+    
+    <bpmn:endEvent id="EndEvent_Performance" name="Performance (CHA)">
+      <bpmn:incoming>Flow_Muscles_To_Performance</bpmn:incoming>
+      <bpmn:incoming>Flow_NotImmediate_To_Performance</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Muscles_To_NotImmediate" name="Not immediate" sourceRef="Gateway_WithMuscles" targetRef="Gateway_NotImmediate" />
+    
+    <bpmn:exclusiveGateway id="Gateway_NotImmediate" name="Delayed effect">
+      <bpmn:incoming>Flow_Muscles_To_NotImmediate</bpmn:incoming>
+      <bpmn:outgoing>Flow_NotImmediate_To_Nature</bpmn:outgoing>
+      <bpmn:outgoing>Flow_NotImmediate_To_Intimidation</bpmn:outgoing>
+      <bpmn:outgoing>Flow_NotImmediate_To_Performance</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_NotImmediate_To_Nature" name="Natural knowledge" sourceRef="Gateway_NotImmediate" targetRef="EndEvent_Nature" />
+    
+    <bpmn:endEvent id="EndEvent_Nature" name="Nature (INT)">
+      <bpmn:incoming>Flow_NotImmediate_To_Nature</bpmn:incoming>
+      <bpmn:incoming>Flow_Outdoors_To_Nature</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_NotImmediate_To_Intimidation" name="Threatening" sourceRef="Gateway_NotImmediate" targetRef="EndEvent_Intimidation" />
+    
+    <bpmn:sequenceFlow id="Flow_NotImmediate_To_Performance" name="Artistic" sourceRef="Gateway_NotImmediate" targetRef="EndEvent_Performance" />
+    
+    <bpmn:sequenceFlow id="Flow_Impress_InGoodFaith" name="In good faith" sourceRef="Gateway_Impress" targetRef="Gateway_InGoodFaith">
+      <bpmn:conditionExpression>impress_method == "good_faith"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:exclusiveGateway id="Gateway_InGoodFaith" name="Good faith approach">
+      <bpmn:incoming>Flow_Impress_InGoodFaith</bpmn:incoming>
+      <bpmn:outgoing>Flow_InGoodFaith_To_Persuasion</bpmn:outgoing>
+      <bpmn:outgoing>Flow_InGoodFaith_To_SeeLying</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_InGoodFaith_To_Persuasion" name="Honest appeal" sourceRef="Gateway_InGoodFaith" targetRef="EndEvent_Persuasion" />
+    
+    <bpmn:sequenceFlow id="Flow_InGoodFaith_To_SeeLying" name="Detect deception" sourceRef="Gateway_InGoodFaith" targetRef="Gateway_SeeLying" />
+    
+    <bpmn:exclusiveGateway id="Gateway_SeeLying" name="Detection method">
+      <bpmn:incoming>Flow_InGoodFaith_To_SeeLying</bpmn:incoming>
+      <bpmn:outgoing>Flow_SeeLying_To_Deception</bpmn:outgoing>
+      <bpmn:outgoing>Flow_SeeLying_To_Insight</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_SeeLying_To_Deception" name="By lies" sourceRef="Gateway_SeeLying" targetRef="EndEvent_Deception" />
+    
+    <bpmn:sequenceFlow id="Flow_SeeLying_To_Insight" name="By empathy" sourceRef="Gateway_SeeLying" targetRef="EndEvent_Insight" />
+    
+    <bpmn:endEvent id="EndEvent_Insight" name="Insight (WIS)">
+      <bpmn:incoming>Flow_SeeLying_To_Insight</bpmn:incoming>
+      <bpmn:incoming>Flow_BookSmart_Street</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <!-- Know Something Path -->
+    <bpmn:sequenceFlow id="Flow_Intent_Know" name="Know Something" sourceRef="Gateway_MainIntent" targetRef="Task_SomethingBoring">
+      <bpmn:conditionExpression>intent == "know"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:task id="Task_SomethingBoring" name="Something boring">
+      <bpmn:incoming>Flow_Intent_Know</bpmn:incoming>
+      <bpmn:outgoing>Flow_Boring_To_SaveLife</bpmn:outgoing>
+    </bpmn:task>
+    
+    <bpmn:sequenceFlow id="Flow_Boring_To_SaveLife" sourceRef="Task_SomethingBoring" targetRef="Gateway_SaveLife" />
+    
+    <bpmn:exclusiveGateway id="Gateway_SaveLife" name="Life-saving knowledge">
+      <bpmn:incoming>Flow_Boring_To_SaveLife</bpmn:incoming>
+      <bpmn:outgoing>Flow_SaveLife_To_Medicine</bpmn:outgoing>
+      <bpmn:outgoing>Flow_SaveLife_To_Outdoors</bpmn:outgoing>
+      <bpmn:outgoing>Flow_SaveLife_To_Survival</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_SaveLife_To_Medicine" name="Medical" sourceRef="Gateway_SaveLife" targetRef="EndEvent_Medicine" />
+    
+    <bpmn:endEvent id="EndEvent_Medicine" name="Medicine (WIS)">
+      <bpmn:incoming>Flow_SaveLife_To_Medicine</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_SaveLife_To_Outdoors" name="About outdoors" sourceRef="Gateway_SaveLife" targetRef="Gateway_Outdoors" />
+    
+    <bpmn:exclusiveGateway id="Gateway_Outdoors" name="Outdoors context">
+      <bpmn:incoming>Flow_SaveLife_To_Outdoors</bpmn:incoming>
+      <bpmn:outgoing>Flow_Outdoors_To_Nature</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Outdoors_To_Perception</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Outdoors_To_Survival</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Outdoors_To_FriendlyAnimal</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_Outdoors_To_Nature" name="Flora &amp; fauna knowledge" sourceRef="Gateway_Outdoors" targetRef="EndEvent_Nature" />
+    
+    <bpmn:sequenceFlow id="Flow_Outdoors_To_Perception" name="Notice details" sourceRef="Gateway_Outdoors" targetRef="EndEvent_Perception" />
+    
+    <bpmn:endEvent id="EndEvent_Perception" name="Perception (WIS)">
+      <bpmn:incoming>Flow_Outdoors_To_Perception</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_Outdoors_To_Survival" name="Track &amp; forage" sourceRef="Gateway_Outdoors" targetRef="EndEvent_Survival" />
+    
+    <bpmn:endEvent id="EndEvent_Survival" name="Survival (WIS)">
+      <bpmn:incoming>Flow_Outdoors_To_Survival</bpmn:incoming>
+      <bpmn:incoming>Flow_SaveLife_To_Survival</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_SaveLife_To_Survival" name="Wilderness" sourceRef="Gateway_SaveLife" targetRef="EndEvent_Survival" />
+    
+    <bpmn:sequenceFlow id="Flow_Outdoors_To_FriendlyAnimal" name="Animal present" sourceRef="Gateway_Outdoors" targetRef="Gateway_FriendlyAnimal" />
+    
+    <bpmn:exclusiveGateway id="Gateway_FriendlyAnimal" name="Is there a friendly animal?">
+      <bpmn:incoming>Flow_Outdoors_To_FriendlyAnimal</bpmn:incoming>
+      <bpmn:outgoing>Flow_FriendlyAnimal_To_BookSmart</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_FriendlyAnimal_To_BookSmart" name="Yes" sourceRef="Gateway_FriendlyAnimal" targetRef="Gateway_BookSmart" />
+    
+    <bpmn:exclusiveGateway id="Gateway_BookSmart" name="Book smart or street smart?">
+      <bpmn:incoming>Flow_FriendlyAnimal_To_BookSmart</bpmn:incoming>
+      <bpmn:outgoing>Flow_BookSmart_Book</bpmn:outgoing>
+      <bpmn:outgoing>Flow_BookSmart_Street</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_BookSmart_Book" name="Book smart" sourceRef="Gateway_BookSmart" targetRef="EndEvent_AnimalHandling">
+      <bpmn:conditionExpression>smart_type == "book"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:endEvent id="EndEvent_AnimalHandling" name="Animal Handling (WIS)">
+      <bpmn:incoming>Flow_BookSmart_Book</bpmn:incoming>
+    </bpmn:endEvent>
+    
+    <bpmn:sequenceFlow id="Flow_BookSmart_Street" name="Street smart" sourceRef="Gateway_BookSmart" targetRef="EndEvent_Insight">
+      <bpmn:conditionExpression>smart_type == "street"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+  </bpmn:process>
+  
+  <!-- BPMN Diagram Interchange (DI) -->
+  <bpmndi:BPMNDiagram id="BPMNDiagram_DnD">
+    <bpmndi:BPMNPlane id="BPMNPlane_DnD" bpmnElement="Collaboration_DnD_SkillResolution">
+      
+      <!-- Participant (Pool) -->
+      <bpmndi:BPMNShape id="Participant_DM_di" bpmnElement="Participant_DM" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="3200" height="2400" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      
+      <!-- Start Event -->
+      <bpmndi:BPMNShape id="StartEvent_Intent_di" bpmnElement="StartEvent_Intent">
+        <dc:Bounds x="252" y="482" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="236" y="525" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <!-- Main Intent Gateway -->
+      <bpmndi:BPMNShape id="Gateway_MainIntent_di" bpmnElement="Gateway_MainIntent" isMarkerVisible="true">
+        <dc:Bounds x="355" y="475" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="347" y="445" width="66" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Start_To_IntentGateway_di" bpmnElement="Flow_Start_To_IntentGateway">
+        <di:waypoint x="288" y="500" />
+        <di:waypoint x="355" y="500" />
+      </bpmndi:BPMNEdge>
+      
+      <!-- Be Strong Path -->
+      <bpmndi:BPMNShape id="EndEvent_Athletics_di" bpmnElement="EndEvent_Athletics">
+        <dc:Bounds x="562" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="545" y="235" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_BeStrong_di" bpmnElement="Flow_Intent_BeStrong">
+        <di:waypoint x="380" y="475" />
+        <di:waypoint x="380" y="210" />
+        <di:waypoint x="562" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="395" y="193" width="50" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Run Jump Climb Path -->
+      <bpmndi:BPMNShape id="Gateway_DifficultFooting_di" bpmnElement="Gateway_DifficultFooting" isMarkerVisible="true">
+        <dc:Bounds x="555" y="305" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="615" y="310" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_RunJump_di" bpmnElement="Flow_Intent_RunJump">
+        <di:waypoint x="380" y="475" />
+        <di:waypoint x="380" y="330" />
+        <di:waypoint x="555" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="400" y="313" width="88" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Backflip Gateway -->
+      <bpmndi:BPMNShape id="Gateway_Backflip_di" bpmnElement="Gateway_Backflip" isMarkerVisible="true">
+        <dc:Bounds x="735" y="245" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="795" y="253" width="46" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Difficult_No_di" bpmnElement="Flow_Difficult_No">
+        <di:waypoint x="580" y="305" />
+        <di:waypoint x="580" y="270" />
+        <di:waypoint x="735" y="270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="615" y="243" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Backflip_To_Athletics_di" bpmnElement="Flow_Backflip_To_Athletics">
+        <di:waypoint x="760" y="245" />
+        <di:waypoint x="760" y="210" />
+        <di:waypoint x="598" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="645" y="193" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Sleight of Hand -->
+      <bpmndi:BPMNShape id="EndEvent_SleightOfHand_di" bpmnElement="EndEvent_SleightOfHand">
+        <dc:Bounds x="892" y="252" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="869" y="295" width="82" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Backflip_To_SleightOfHand_di" bpmnElement="Flow_Backflip_To_SleightOfHand">
+        <di:waypoint x="785" y="270" />
+        <di:waypoint x="892" y="270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="793" y="236" width="75" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Stealth -->
+      <bpmndi:BPMNShape id="EndEvent_Stealth_di" bpmnElement="EndEvent_Stealth">
+        <dc:Bounds x="892" y="342" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="874" y="385" width="72" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Backflip_To_Stealth_di" bpmnElement="Flow_Backflip_To_Stealth">
+        <di:waypoint x="760" y="295" />
+        <di:waypoint x="760" y="360" />
+        <di:waypoint x="892" y="360" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="790" y="343" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Fine Motor Gateway -->
+      <bpmndi:BPMNShape id="Gateway_FineMotor_di" bpmnElement="Gateway_FineMotor" isMarkerVisible="true">
+        <dc:Bounds x="735" y="385" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="795" y="396" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Difficult_Yes_di" bpmnElement="Flow_Difficult_Yes">
+        <di:waypoint x="580" y="355" />
+        <di:waypoint x="580" y="410" />
+        <di:waypoint x="735" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="605" y="376" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Acrobatics -->
+      <bpmndi:BPMNShape id="EndEvent_Acrobatics_di" bpmnElement="EndEvent_Acrobatics">
+        <dc:Bounds x="892" y="432" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="869" y="475" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_FineMotor_To_Acrobatics_di" bpmnElement="Flow_FineMotor_To_Acrobatics">
+        <di:waypoint x="760" y="435" />
+        <di:waypoint x="760" y="450" />
+        <di:waypoint x="892" y="450" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="782" y="433" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Arcana -->
+      <bpmndi:BPMNShape id="EndEvent_Arcana_di" bpmnElement="EndEvent_Arcana">
+        <dc:Bounds x="1622" y="772" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1606" y="815" width="68" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_FineMotor_To_Arcana_di" bpmnElement="Flow_FineMotor_To_Arcana">
+        <di:waypoint x="785" y="410" />
+        <di:waypoint x="1640" y="410" />
+        <di:waypoint x="1640" y="772" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1175" y="393" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Investigation -->
+      <bpmndi:BPMNShape id="EndEvent_Investigation_di" bpmnElement="EndEvent_Investigation">
+        <dc:Bounds x="1752" y="772" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1730" y="815" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_FineMotor_To_Investigation_di" bpmnElement="Flow_FineMotor_To_Investigation">
+        <di:waypoint x="760" y="385" />
+        <di:waypoint x="760" y="360" />
+        <di:waypoint x="1770" y="360" />
+        <di:waypoint x="1770" y="772" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1220" y="343" width="85" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Be Sneaky Path -->
+      <bpmndi:BPMNShape id="Task_MoveUnseen_di" bpmnElement="Task_MoveUnseen">
+        <dc:Bounds x="690" y="320" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_BeSneaky_di" bpmnElement="Flow_Intent_BeSneaky">
+        <di:waypoint x="405" y="500" />
+        <di:waypoint x="548" y="500" />
+        <di:waypoint x="548" y="360" />
+        <di:waypoint x="690" y="360" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="570" y="343" width="58" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_MoveUnseen_To_Stealth_di" bpmnElement="Flow_MoveUnseen_To_Stealth">
+        <di:waypoint x="790" y="360" />
+        <di:waypoint x="892" y="360" />
+      </bpmndi:BPMNEdge>
+      
+      <!-- Persuade Path -->
+      <bpmndi:BPMNShape id="Task_LieToSomeone_di" bpmnElement="Task_LieToSomeone">
+        <dc:Bounds x="530" y="540" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_Persuade_di" bpmnElement="Flow_Intent_Persuade">
+        <di:waypoint x="380" y="525" />
+        <di:waypoint x="380" y="580" />
+        <di:waypoint x="530" y="580" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="390" y="563" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNShape id="Gateway_Persuade_di" bpmnElement="Gateway_Persuade" isMarkerVisible="true">
+        <dc:Bounds x="705" y="555" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="765" y="566" width="88" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Lie_To_PersuadeGateway_di" bpmnElement="Flow_Lie_To_PersuadeGateway">
+        <di:waypoint x="630" y="580" />
+        <di:waypoint x="705" y="580" />
+      </bpmndi:BPMNEdge>
+      
+      <!-- Deception -->
+      <bpmndi:BPMNShape id="EndEvent_Deception_di" bpmnElement="EndEvent_Deception">
+        <dc:Bounds x="2192" y="562" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2172" y="605" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Persuade_To_Deception_di" bpmnElement="Flow_Persuade_To_Deception">
+        <di:waypoint x="755" y="580" />
+        <di:waypoint x="2192" y="580" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1450" y="563" width="45" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Intimidation -->
+      <bpmndi:BPMNShape id="EndEvent_Intimidation_di" bpmnElement="EndEvent_Intimidation">
+        <dc:Bounds x="2192" y="652" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2171" y="695" width="78" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Persuade_To_Intimidation_di" bpmnElement="Flow_Persuade_To_Intimidation">
+        <di:waypoint x="730" y="605" />
+        <di:waypoint x="730" y="670" />
+        <di:waypoint x="2192" y="670" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1440" y="653" width="48" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Persuasion -->
+      <bpmndi:BPMNShape id="EndEvent_Persuasion_di" bpmnElement="EndEvent_Persuasion">
+        <dc:Bounds x="2192" y="742" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2170" y="785" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Persuade_To_Persuasion_di" bpmnElement="Flow_Persuade_To_Persuasion">
+        <di:waypoint x="730" y="605" />
+        <di:waypoint x="730" y="760" />
+        <di:waypoint x="2192" y="760" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1425" y="743" width="74" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Impress Path -->
+      <bpmndi:BPMNShape id="Gateway_Impress_di" bpmnElement="Gateway_Impress" isMarkerVisible="true">
+        <dc:Bounds x="555" y="675" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="615" y="686" width="85" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_Impress_di" bpmnElement="Flow_Intent_Impress">
+        <di:waypoint x="380" y="525" />
+        <di:waypoint x="380" y="700" />
+        <di:waypoint x="555" y="700" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="390" y="683" width="95" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- With Song -->
+      <bpmndi:BPMNShape id="Gateway_WithSong_di" bpmnElement="Gateway_WithSong" isMarkerVisible="true">
+        <dc:Bounds x="755" y="675" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="815" y="686" width="66" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Impress_WithSong_di" bpmnElement="Flow_Impress_WithSong">
+        <di:waypoint x="605" y="700" />
+        <di:waypoint x="755" y="700" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="650" y="683" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Clue Gateway -->
+      <bpmndi:BPMNShape id="Gateway_Clue_di" bpmnElement="Gateway_Clue" isMarkerVisible="true">
+        <dc:Bounds x="955" y="675" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1015" y="686" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Song_To_Clue_di" bpmnElement="Flow_Song_To_Clue">
+        <di:waypoint x="805" y="700" />
+        <di:waypoint x="955" y="700" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="850" y="683" width="66" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Clue_To_Arcana_di" bpmnElement="Flow_Clue_To_Arcana">
+        <di:waypoint x="980" y="725" />
+        <di:waypoint x="980" y="790" />
+        <di:waypoint x="1622" y="790" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1265" y="773" width="41" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- History -->
+      <bpmndi:BPMNShape id="EndEvent_History_di" bpmnElement="EndEvent_History">
+        <dc:Bounds x="1622" y="862" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1610" y="905" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Clue_To_History_di" bpmnElement="Flow_Clue_To_History">
+        <di:waypoint x="980" y="725" />
+        <di:waypoint x="980" y="880" />
+        <di:waypoint x="1622" y="880" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1260" y="863" width="47" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Clue_To_Investigation_di" bpmnElement="Flow_Clue_To_Investigation">
+        <di:waypoint x="1005" y="700" />
+        <di:waypoint x="1770" y="700" />
+        <di:waypoint x="1770" y="772" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1360" y="683" width="43" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Religion -->
+      <bpmndi:BPMNShape id="EndEvent_Religion_di" bpmnElement="EndEvent_Religion">
+        <dc:Bounds x="1622" y="682" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1605" y="725" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Song_To_Religion_di" bpmnElement="Flow_Song_To_Religion">
+        <di:waypoint x="780" y="675" />
+        <di:waypoint x="780" y="650" />
+        <di:waypoint x="1640" y="650" />
+        <di:waypoint x="1640" y="682" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1170" y="633" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- With Muscles -->
+      <bpmndi:BPMNShape id="Gateway_WithMuscles_di" bpmnElement="Gateway_WithMuscles" isMarkerVisible="true">
+        <dc:Bounds x="755" y="795" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="815" y="806" width="73" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Impress_WithMuscles_di" bpmnElement="Flow_Impress_WithMuscles">
+        <di:waypoint x="580" y="725" />
+        <di:waypoint x="580" y="820" />
+        <di:waypoint x="755" y="820" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="630" y="803" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Performance -->
+      <bpmndi:BPMNShape id="EndEvent_Performance_di" bpmnElement="EndEvent_Performance">
+        <dc:Bounds x="2192" y="802" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2168" y="845" width="84" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Muscles_To_Performance_di" bpmnElement="Flow_Muscles_To_Performance">
+        <di:waypoint x="805" y="820" />
+        <di:waypoint x="2192" y="820" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1460" y="803" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Not Immediate -->
+      <bpmndi:BPMNShape id="Gateway_NotImmediate_di" bpmnElement="Gateway_NotImmediate" isMarkerVisible="true">
+        <dc:Bounds x="955" y="795" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1015" y="806" width="71" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Muscles_To_NotImmediate_di" bpmnElement="Flow_Muscles_To_NotImmediate">
+        <di:waypoint x="780" y="845" />
+        <di:waypoint x="780" y="870" />
+        <di:waypoint x="980" y="870" />
+        <di:waypoint x="980" y="845" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="845" y="853" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Nature -->
+      <bpmndi:BPMNShape id="EndEvent_Nature_di" bpmnElement="EndEvent_Nature">
+        <dc:Bounds x="1752" y="882" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1738" y="925" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_NotImmediate_To_Nature_di" bpmnElement="Flow_NotImmediate_To_Nature">
+        <di:waypoint x="980" y="845" />
+        <di:waypoint x="980" y="900" />
+        <di:waypoint x="1752" y="900" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1320" y="883" width="95" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_NotImmediate_To_Intimidation_di" bpmnElement="Flow_NotImmediate_To_Intimidation">
+        <di:waypoint x="1005" y="820" />
+        <di:waypoint x="2100" y="820" />
+        <di:waypoint x="2100" y="670" />
+        <di:waypoint x="2192" y="670" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1495" y="803" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_NotImmediate_To_Performance_di" bpmnElement="Flow_NotImmediate_To_Performance">
+        <di:waypoint x="1005" y="820" />
+        <di:waypoint x="2192" y="820" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1570" y="803" width="35" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- In Good Faith -->
+      <bpmndi:BPMNShape id="Gateway_InGoodFaith_di" bpmnElement="Gateway_InGoodFaith" isMarkerVisible="true">
+        <dc:Bounds x="755" y="915" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="815" y="920" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Impress_InGoodFaith_di" bpmnElement="Flow_Impress_InGoodFaith">
+        <di:waypoint x="580" y="725" />
+        <di:waypoint x="580" y="940" />
+        <di:waypoint x="755" y="940" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="640" y="923" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_InGoodFaith_To_Persuasion_di" bpmnElement="Flow_InGoodFaith_To_Persuasion">
+        <di:waypoint x="805" y="940"/>
+        <di:waypoint x="2210" y="940" />
+        <di:waypoint x="2210" y="778" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1465" y="923" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- See Lying Gateway -->
+      <bpmndi:BPMNShape id="Gateway_SeeLying_di" bpmnElement="Gateway_SeeLying" isMarkerVisible="true">
+        <dc:Bounds x="955" y="915" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1015" y="926" width="83" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_InGoodFaith_To_SeeLying_di" bpmnElement="Flow_InGoodFaith_To_SeeLying">
+        <di:waypoint x="805" y="940" />
+        <di:waypoint x="955" y="940" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="845" y="923" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_SeeLying_To_Deception_di" bpmnElement="Flow_SeeLying_To_Deception">
+        <di:waypoint x="1005" y="940" />
+        <di:waypoint x="2210" y="940" />
+        <di:waypoint x="2210" y="598" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1575" y="923" width="38" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Insight -->
+      <bpmndi:BPMNShape id="EndEvent_Insight_di" bpmnElement="EndEvent_Insight">
+        <dc:Bounds x="2562" y="922" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2548" y="965" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_SeeLying_To_Insight_di" bpmnElement="Flow_SeeLying_To_Insight">
+        <di:waypoint x="1005" y="940" />
+        <di:waypoint x="2562" y="940" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1740" y="923" width="62" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Know Something Path -->
+      <bpmndi:BPMNShape id="Task_SomethingBoring_di" bpmnElement="Task_SomethingBoring">
+        <dc:Bounds x="530" y="1040" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Intent_Know_di" bpmnElement="Flow_Intent_Know">
+        <di:waypoint x="380" y="525" />
+        <di:waypoint x="380" y="1080" />
+        <di:waypoint x="530" y="1080" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="390" y="1063" width="86" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Save Life Gateway -->
+      <bpmndi:BPMNShape id="Gateway_SaveLife_di" bpmnElement="Gateway_SaveLife" isMarkerVisible="true">
+        <dc:Bounds x="705" y="1055" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="765" y="1060" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Boring_To_SaveLife_di" bpmnElement="Flow_Boring_To_SaveLife">
+        <di:waypoint x="630" y="1080" />
+        <di:waypoint x="705" y="1080" />
+      </bpmndi:BPMNEdge>
+      
+      <!-- Medicine -->
+      <bpmndi:BPMNShape id="EndEvent_Medicine_di" bpmnElement="EndEvent_Medicine">
+        <dc:Bounds x="2562" y="1062" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2542" y="1105" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_SaveLife_To_Medicine_di" bpmnElement="Flow_SaveLife_To_Medicine">
+        <di:waypoint x="755" y="1080" />
+        <di:waypoint x="2562" y="1080" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1620" y="1063" width="40" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Outdoors Gateway -->
+      <bpmndi:BPMNShape id="Gateway_Outdoors_di" bpmnElement="Gateway_Outdoors" isMarkerVisible="true">
+        <dc:Bounds x="955" y="1055" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1015" y="1066" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_SaveLife_To_Outdoors_di" bpmnElement="Flow_SaveLife_To_Outdoors">
+        <di:waypoint x="755" y="1080" />
+        <di:waypoint x="955" y="1080" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="820" y="1063" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Outdoors_To_Nature_di" bpmnElement="Flow_Outdoors_To_Nature">
+        <di:waypoint x="980" y="1055" />
+        <di:waypoint x="980" y="900" />
+        <di:waypoint x="1752" y="900" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1290" y="866" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Perception -->
+      <bpmndi:BPMNShape id="EndEvent_Perception_di" bpmnElement="EndEvent_Perception">
+        <dc:Bounds x="2562" y="1152" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2542" y="1195" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Outdoors_To_Perception_di" bpmnElement="Flow_Outdoors_To_Perception">
+        <di:waypoint x="980" y="1105" />
+        <di:waypoint x="980" y="1170" />
+        <di:waypoint x="2562" y="1170" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1690" y="1153" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Survival -->
+      <bpmndi:BPMNShape id="EndEvent_Survival_di" bpmnElement="EndEvent_Survival">
+        <dc:Bounds x="2562" y="1242" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2544" y="1285" width="72" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Outdoors_To_Survival_di" bpmnElement="Flow_Outdoors_To_Survival">
+        <di:waypoint x="980" y="1105" />
+        <di:waypoint x="980" y="1260" />
+        <di:waypoint x="2562" y="1260" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1680" y="1243" width="73" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_SaveLife_To_Survival_di" bpmnElement="Flow_SaveLife_To_Survival">
+        <di:waypoint x="730" y="1105" />
+        <di:waypoint x="730" y="1260" />
+        <di:waypoint x="2562" y="1260" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1610" y="1243" width="56" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Friendly Animal Gateway -->
+      <bpmndi:BPMNShape id="Gateway_FriendlyAnimal_di" bpmnElement="Gateway_FriendlyAnimal" isMarkerVisible="true">
+        <dc:Bounds x="1155" y="1055" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1215" y="1046" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Outdoors_To_FriendlyAnimal_di" bpmnElement="Flow_Outdoors_To_FriendlyAnimal">
+        <di:waypoint x="1005" y="1080" />
+        <di:waypoint x="1155" y="1080" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="1063" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Book Smart Gateway -->
+      <bpmndi:BPMNShape id="Gateway_BookSmart_di" bpmnElement="Gateway_BookSmart" isMarkerVisible="true">
+        <dc:Bounds x="1355" y="1055" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1415" y="1053" width="68" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_FriendlyAnimal_To_BookSmart_di" bpmnElement="Flow_FriendlyAnimal_To_BookSmart">
+        <di:waypoint x="1205" y="1080" />
+        <di:waypoint x="1355" y="1080" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1272" y="1063" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <!-- Animal Handling -->
+      <bpmndi:BPMNShape id="EndEvent_AnimalHandling_di" bpmnElement="EndEvent_AnimalHandling">
+        <dc:Bounds x="2562" y="1332" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2535" y="1375" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_BookSmart_Book_di" bpmnElement="Flow_BookSmart_Book">
+        <di:waypoint x="1380" y="1105" />
+        <di:waypoint x="1380" y="1350" />
+        <di:waypoint x="2562" y="1350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1900" y="1333" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_BookSmart_Street_di" bpmnElement="Flow_BookSmart_Street">
+        <di:waypoint x="1405" y="1080" />
+        <di:waypoint x="2580" y="1080" />
+        <di:waypoint x="2580" y="958" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="1063" width="62" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  
+</bpmn:definitions>

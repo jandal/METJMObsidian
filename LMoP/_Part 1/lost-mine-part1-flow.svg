@@ -1,0 +1,149 @@
+<svg viewBox="0 0 1910 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="1910" height="1000" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="955" y="40" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold" fill="#333">Lost Mine of Phandelver - Part 1: Goblin Arrows (DM Flow)</text>
+  
+  <!-- Start Node -->
+  <rect x="860" y="70" width="200" height="70" rx="10" fill="#d0f0c0" stroke="#006400" stroke-width="2" />
+  <text x="960" y="110" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Start Adventure</text>
+  
+  <!-- Introduction Box -->
+  <rect x="760" y="160" width="400" height="100" rx="10" fill="#fffacd" stroke="#8b8000" stroke-width="2" />
+  <text x="960" y="185" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Introduction</text>
+  <text x="960" y="210" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Introduce adventure hook</text>
+  <text x="960" y="230" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Characters introduce themselves</text>
+  <text x="960" y="250" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Establish relationship with Gundren</text>
+  
+  <!-- Ambush Box -->
+  <rect x="760" y="280" width="400" height="120" rx="10" fill="#fffacd" stroke="#8b8000" stroke-width="2" />
+  <text x="960" y="305" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Goblin Ambush</text>
+  <text x="960" y="330" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Dead horses on Triboar Trail (Gundren's)</text>
+  <text x="960" y="350" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Empty map case</text>
+  <text x="960" y="370" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- 4 goblins attack (2 melee, 2 ranged)</text>
+  <text x="960" y="390" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Last goblin flees towards hideout</text>
+  
+  <!-- Decision Point 1 -->
+  <path d="M960,400 L960,420 L880,440 L960,460 L1040,440 L960,420" fill="#e6e6fa" stroke="#483d8b" stroke-width="2" />
+  <text x="960" y="445" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">What do players do?</text>
+  
+  <!-- Options from Decision 1 -->
+  <rect x="635" y="480" width="250" height="60" rx="10" fill="#f0e68c" stroke="#8b8000" stroke-width="2" />
+  <text x="760" y="515" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Follow goblin trail</text>
+  
+  <rect x="1035" y="480" width="250" height="60" rx="10" fill="#f0e68c" stroke="#8b8000" stroke-width="2" />
+  <text x="1160" y="505" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Continue to Phandalin</text>
+  <text x="1160" y="525" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">(Skip to Part 2)</text>
+  
+  <!-- Goblin Trail -->
+  <rect x="635" y="560" width="250" height="100" rx="10" fill="#fffacd" stroke="#8b8000" stroke-width="2" />
+  <text x="760" y="585" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Goblin Trail</text>
+  <text x="760" y="610" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- DC 10 Wisdom (Survival) to follow</text>
+  <text x="760" y="630" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Snare trap (DC 12 Perception)</text>
+  <text x="760" y="650" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Pit trap (DC 15 Perception)</text>
+  
+  <!-- Cragmaw Hideout -->
+  <rect x="635" y="680" width="250" height="80" rx="10" fill="#fffacd" stroke="#8b8000" stroke-width="2" />
+  <text x="760" y="705" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Cragmaw Hideout</text>
+  <text x="760" y="730" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Reach hideout entrance (Area 1)</text>
+  <text x="760" y="750" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">- Award 75 XP for finding hideout</text>
+  
+  <!-- Hideout Exploration - Left Side -->
+  <rect x="275" y="680" width="250" height="100" rx="10" fill="#add8e6" stroke="#4682b4" stroke-width="2" />
+  <text x="400" y="705" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Areas 1-2</text>
+  <text x="400" y="730" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 1: Cave Mouth</text>
+  <text x="400" y="750" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 2: Goblin Blind (2 goblins)</text>
+  <text x="400" y="770" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Stealth opportunity</text>
+  
+  <!-- Hideout Exploration - Right Side -->
+  <rect x="995" y="680" width="250" height="180" rx="10" fill="#add8e6" stroke="#4682b4" stroke-width="2" />
+  <text x="1120" y="705" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Areas 3-8</text>
+  <text x="1120" y="730" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 3: Kennel (3 wolves)</text>
+  <text x="1120" y="750" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 4: Steep Passage</text>
+  <text x="1120" y="770" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 5: Overpass (1 goblin, flood trap)</text>
+  <text x="1120" y="790" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 6: Goblin Den (6 goblins, Sildar)</text>
+  <text x="1120" y="810" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 7: Twin Pools (3 goblins)</text>
+  <text x="1120" y="830" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Area 8: Klarg's Cave (Bugbear, wolf, 2 goblins)</text>
+  
+  <!-- Boss/Main Objectives Box -->
+  <rect x="635" y="780" width="250" height="160" rx="10" fill="#ffc0cb" stroke="#8b0000" stroke-width="2" />
+  <text x="760" y="805" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Key Objectives</text>
+  <text x="760" y="830" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">1. Rescue Sildar Hallwinter (Area 6)</text>
+  <text x="760" y="850" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">2. Defeat Klarg the bugbear (Area 8)</text>
+  <text x="760" y="870" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">3. Recover stolen supplies</text>
+  <text x="760" y="890" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">4. Learn about the Black Spider</text>
+  <text x="760" y="910" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">5. Learn about Cragmaw Castle</text>
+  <text x="760" y="930" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">6. Learn about Wave Echo Cave</text>
+  
+  <!-- Conclusion Box -->
+  <rect x="635" y="960" width="650" height="30" rx="10" fill="#90ee90" stroke="#006400" stroke-width="2" />
+  <text x="960" y="980" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Award 275 XP per character for completing hideout (should reach level 2)</text>
+  
+  <!-- Connectors -->
+  <line x1="960" y1="140" x2="960" y2="160" stroke="#333" stroke-width="2" />
+  <line x1="960" y1="260" x2="960" y2="280" stroke="#333" stroke-width="2" />
+  <line x1="960" y1="460" x2="760" y2="480" stroke="#333" stroke-width="2" />
+  <line x1="960" y1="460" x2="1160" y2="480" stroke="#333" stroke-width="2" />
+  <line x1="760" y1="540" x2="760" y2="560" stroke="#333" stroke-width="2" />
+  <line x1="760" y1="660" x2="760" y2="680" stroke="#333" stroke-width="2" />
+  <line x1="635" y1="720" x2="525" y2="720" stroke="#333" stroke-width="2" />
+  <line x1="885" y1="720" x2="995" y2="720" stroke="#333" stroke-width="2" />
+  <line x1="400" y1="780" x2="400" y2="860" stroke="#333" stroke-width="2" />
+  <line x1="400" y1="860" x2="635" y2="860" stroke="#333" stroke-width="2" />
+  <line x1="1120" y1="860" x2="1120" y2="880" stroke="#333" stroke-width="2" />
+  <line x1="1120" y1="880" x2="885" y2="880" stroke="#333" stroke-width="2" />
+  <line x1="760" y1="940" x2="760" y2="960" stroke="#333" stroke-width="2" />
+  <line x1="1120" y1="860" x2="1285" y2="860" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="1285" y1="860" x2="1285" y2="960" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="1285" y1="960" x2="1285" y2="975" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Legend -->
+  <rect x="1370" y="100" width="270" height="180" rx="10" fill="#fff" stroke="#333" stroke-width="2" />
+  <text x="1505" y="125" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Legend</text>
+  
+  <rect x="1390" y="140" width="30" height="20" rx="5" fill="#d0f0c0" stroke="#006400" stroke-width="2" />
+  <text x="1435" y="155" font-family="Arial" font-size="14" fill="#333">Start/End</text>
+  
+  <rect x="1390" y="170" width="30" height="20" rx="5" fill="#fffacd" stroke="#8b8000" stroke-width="2" />
+  <text x="1455" y="185" font-family="Arial" font-size="14" fill="#333">Narrative Sections</text>
+  
+  <path d="M1405,205 L1405,215 L1390,220 L1405,225 L1420,220 L1405,215" fill="#e6e6fa" stroke="#483d8b" stroke-width="2" />
+  <text x="1455" y="220" font-family="Arial" font-size="14" fill="#333">Decision Points</text>
+  
+  <rect x="1390" y="230" width="30" height="20" rx="5" fill="#add8e6" stroke="#4682b4" stroke-width="2" />
+  <text x="1445" y="245" font-family="Arial" font-size="14" fill="#333">Location Areas</text>
+  
+  <rect x="1390" y="260" width="30" height="20" rx="5" fill="#ffc0cb" stroke="#8b0000" stroke-width="2" />
+  <text x="1445" y="275" font-family="Arial" font-size="14" fill="#333">Key Objectives</text>
+  
+  <!-- DM Notes -->
+  <rect x="1370" y="300" width="500" height="465" rx="10" fill="#fff" stroke="#333" stroke-width="2" />
+  <text x="1620" y="325" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">DM Tips for Running Part 1</text>
+  
+  <text x="1380" y="355" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Introduction:</text>
+  <text x="1380" y="375" font-family="Arial" font-size="14" fill="#333">• Establish character connections to Gundren</text>
+  <text x="1380" y="395" font-family="Arial" font-size="14" fill="#333">• Determine marching order before ambush</text>
+  <text x="1380" y="415" font-family="Arial" font-size="14" fill="#333">• Establish who is driving the wagon (if any)</text>
+  
+  <text x="1380" y="445" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Goblin Ambush:</text>
+  <text x="1380" y="465" font-family="Arial" font-size="14" fill="#333">• Roll Stealth (+6) for goblins to determine surprise</text>
+  <text x="1380" y="485" font-family="Arial" font-size="14" fill="#333">• Last goblin flees after 3 are defeated</text>
+  <text x="1380" y="505" font-family="Arial" font-size="14" fill="#333">• Characters can capture goblins for information</text>
+  
+  <text x="1380" y="535" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Cragmaw Hideout:</text>
+  <text x="1380" y="555" font-family="Arial" font-size="14" fill="#333">• Water noise makes it harder to hear (DC 15 Perception)</text>
+  <text x="1380" y="575" font-family="Arial" font-size="14" fill="#333">• Watch for flood trigger in Area 5</text>
+  <text x="1380" y="595" font-family="Arial" font-size="14" fill="#333">• Yeemik (goblin leader) may try to bargain in Area 6</text>
+  <text x="1380" y="615" font-family="Arial" font-size="14" fill="#333">• Wolves in Area 3 might break free (DC 15 Strength)</text>
+  <text x="1380" y="635" font-family="Arial" font-size="14" fill="#333">• Players may climb chimney from Area 3 to Area 8</text>
+  
+  <text x="1380" y="665" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Key Information from Sildar:</text>
+  <text x="1380" y="685" font-family="Arial" font-size="14" fill="#333">• Rockseeker brothers found Wave Echo Cave</text>
+  <text x="1380" y="705" font-family="Arial" font-size="14" fill="#333">• Gundren had a map, now taken to Cragmaw Castle</text>
+  <text x="1380" y="725" font-family="Arial" font-size="14" fill="#333">• The Black Spider wants the map</text>
+  <text x="1380" y="745" font-family="Arial" font-size="14" fill="#333">• Sildar's contact in Phandalin is Iarno Albrek</text>
+  
+  <text x="1500" y="810" font-family="Arial" font-size="12" fill="#333" font-style="italic">Note: Sildar will offer 50gp to escort him to Phandalin</text>
+  <text x="1550" y="830" font-family="Arial" font-size="12" fill="#333" font-style="italic">Characters should reach Level 2 after completing the hideout</text>
+</svg>
